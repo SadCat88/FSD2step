@@ -1,0 +1,15 @@
+// @function rem($pixels, $context: $mainFontSize) {
+//     @if (unitless($pixels)) {
+//         $pixels: $pixels * 1px;
+//     }
+//     @if (unitless($context)) {
+//         $context: $context * 1px;
+//     }
+//     @return $pixels / $context * 1rem;
+// }
+
+// Затем можно указывать в css что-то типа такого
+// h1 { font-size: rem(20); }
+// Размер шрифта будет меняться от разрешения
+// Что прописано медиа запросами в html {} main.scss
+// И пересчитываться через миксин

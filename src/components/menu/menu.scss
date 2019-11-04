@@ -1,0 +1,9 @@
+// стили для компонента menu
+ul {
+    border: 1px solid rgb(21, 13, 134);
+    li {
+        display: inline-block;
+        padding: 5px 10px;
+        background: rgb(134, 209, 223);
+    }
+}

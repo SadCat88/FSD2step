@@ -1,0 +1,105 @@
+// для подключения переменных и расширений
+
+// ↓↓ Extends ==================================================================
+// To use: @extend .a11y;
+// .a11y {
+//     outline: 2px dashed lighten($main-color, 20%);
+//     outline-offset: 2px;
+//     z-index: 20;
+// }
+
+// ↓ Fonts ==================================
+// 
+// Main font
+.main-font {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+// 
+// Main page heading
+.main-page-heading {
+    font-family: 'Quicksand',
+        sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+}
+
+// 
+// Main bold font
+.main-bold-font {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+}
+
+// 
+// Interactive font
+.inter-font {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+// 
+// Interactive bold font
+.inter-bold-font {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+// 
+//  Interactive light font
+.inter-light-font {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+// 
+// ↑ Fonts ==================================
+// ↑↑ Extends ==================================================================
+
+
+
+// ↓↓ Variables ==================================================================
+// For example:
+// $mainColor   : #ff0000;
+// To use: color: $mainColor;
+
+// Colors ========================================================================
+$mainBgColor: #ffffff;
+
+// Screen ==========================
+$desktopWidth : 1280px;
+$smDesktopWidth : 980px;
+$tabletWidth : 768px;
+$phoneWidth : 480px;
+$smPhoneWidth : 320px;
+// ↑↑ Variables ==================================================================
