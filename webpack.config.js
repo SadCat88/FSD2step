@@ -80,7 +80,7 @@ const baseWebpackConfig = merge([
       // куда
       filename: `${PATHS.assets}/pages/[name]/[name].[hash].js`,
       // как назвать файл, эта же ссылка пойдет в тег script
-      publicPath: "/"
+      publicPath: "./"
       // для интернета?
     },
     plugins: ENTRIES.map(FILENAME => {

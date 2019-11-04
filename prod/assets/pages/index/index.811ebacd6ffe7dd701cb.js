@@ -137,7 +137,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
@@ -255,5 +255,5 @@ if (content.locals) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.4245e7ed35df0f808ace.js.map
-//# sourceMappingURL=index.4245e7ed35df0f808ace.js.map
+//# sourceMappingURL=index.811ebacd6ffe7dd701cb.js.map
+//# sourceMappingURL=index.811ebacd6ffe7dd701cb.js.map

@@ -26,11 +26,15 @@ module.exports = function() {
             MiniCssExtractPlugin.loader,
             {
               loader: "css-loader",
-              options: { sourceMap: true }
+              options: {
+                sourceMap: true
+              }
             },
             {
               loader: "sass-loader",
-              options: { sourceMap: true }
+              options: {
+                sourceMap: true
+              }
             }
           ]
         }
