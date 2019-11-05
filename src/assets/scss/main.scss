@@ -86,17 +86,17 @@ img {
 // обводка и ось симметрии 
 
 header {
-    outline: 5px solid rgba(166, 168, 1, 0.5);
+    outline: 5px dashed rgba(166, 168, 1, 0.5);
     outline-offset: -5px;
 }
 
 main {
-    outline: 5px solid rgba(0, 153, 255, 0.5);
+    outline: 5px dashed rgba(0, 153, 255, 0.5);
     outline-offset: -5px;
 }
 
 footer {
-    outline: 5px solid rgba(255, 0, 234, 0.5);
+    outline: 5px dashed rgba(255, 0, 234, 0.5);
     outline-offset: -5px;
 }
 

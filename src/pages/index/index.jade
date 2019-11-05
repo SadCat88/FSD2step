@@ -3,22 +3,22 @@ block title
     | Home
 block body
     header.header
-        .wrapper
+        .wrapper.wrapper-header
             div.logotype
                 img(src="assets/img/logo.svg" alt="Логотип")
                 p.visually-hidden TOXIN
             nav.header-navigation
                 ul.header-menu
                     li.main-menu__item О нас
-                    li.main-menu__item Услуги
+                    li.main-menu__item.main-menu__submenu Услуги
                     li.main-menu__item Вакансии
                     li.main-menu__item Новости
-                    li.main-menu__item Соглашения
+                    li.main-menu__item.main-menu__submenu Соглашения
                 ul.user-menu
                     li.user-menu__input
-                        a(href="#").button.button__login Войти
+                        a(href="#").button.button_light.button_input Войти
                     li.user-menu__registration
-                        a(href="#").button.button__login Зарегистрироваться
+                        a(href="#").button.button_dark.button_registration Зарегистрироваться
     main.promo
         .wrapper
             h1.visually-hidden Сервис бронирования номеров в отелях

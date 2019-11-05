@@ -1,0 +1,37 @@
+@import '../../assets/scss/utils/vars.scss';
+
+.header {
+    padding: 15px 0 0 0;
+    min-height: 70px;
+
+    .wrapper-header,
+    .header-navigation,
+    .header-menu,
+    .user-menu {
+        display: flex;
+    }
+
+    .wrapper-header {
+        justify-content: space-between;
+    }
+
+    .header-navigation {
+        align-items: baseline;
+        padding: 3px 0 0 0;
+        @extend .inter-font;
+
+        .main-menu__item {
+            padding-right: 20px;
+        }
+
+        .main-menu__submenu::after {
+            content: "expand_more";
+            @extend .icons-font;
+            font-size: 24px;
+        }
+
+        .user-menu__registration {
+            padding-left: 20px;
+        }
+    }
+}

@@ -5,8 +5,10 @@ module.exports = function() {
   return {
     devServer: {
       // настройки Webpack-Dev-Server
-      contentBase: baseConfig.pathVars.PATHS.prod,
-      // путь в котором WDS будет искать index.html
+      // contentBase: baseConfig.pathVars.PATHS.prod,
+      // путь в котором WDS будет искать index.html для статического режима
+      publicPath: "/",
+      // необходимо чтобы отменить "./" из output
       stats: "errors-only",
       // вывод в консоль в которой крутится WDS только информации об ошибках
       port: 8088,

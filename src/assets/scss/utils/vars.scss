@@ -1,12 +1,33 @@
 // для подключения переменных и расширений
 
+// ↓↓ Variables ==================================================================
+// For example:
+// $mainColor   : #ff0000;
+// To use: color: $mainColor;
+
+// Colors ========================================================================
+$mainBgColor: #ffffff;
+$mainColor: #BC9CFF;
+$mainGradientColor: #8BA4F9;
+
+// Screen ==========================
+$desktopWidth : 1280px;
+$smDesktopWidth : 980px;
+$tabletWidth : 768px;
+$phoneWidth : 480px;
+$smPhoneWidth : 320px;
+// ↑↑ Variables ==================================================================
+
 // ↓↓ Extends ==================================================================
 // To use: @extend .a11y;
-// .a11y {
-//     outline: 2px dashed lighten($main-color, 20%);
-//     outline-offset: 2px;
-//     z-index: 20;
-// }
+.a11y {
+    outline: none;
+    box-shadow:
+        0 0 0 2px $mainBgColor,
+        0 0 0 4px darken($mainColor, 10%);
+    z-index: 20;
+
+}
 
 // ↓ Fonts ==================================
 // 
@@ -83,23 +104,28 @@
 }
 
 // 
+//  Material Icons font
+.icons-font {
+    font-family: "Material Icons";
+    line-height: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+// 
 // ↑ Fonts ==================================
 // ↑↑ Extends ==================================================================
-
-
-
-// ↓↓ Variables ==================================================================
-// For example:
-// $mainColor   : #ff0000;
-// To use: color: $mainColor;
-
-// Colors ========================================================================
-$mainBgColor: #ffffff;
-
-// Screen ==========================
-$desktopWidth : 1280px;
-$smDesktopWidth : 980px;
-$tabletWidth : 768px;
-$phoneWidth : 480px;
-$smPhoneWidth : 320px;
-// ↑↑ Variables ==================================================================

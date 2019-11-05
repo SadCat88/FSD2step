@@ -1,0 +1,56 @@
+@import '../../assets/scss/utils/vars.scss';
+
+.button {
+    display: block;
+    height: 34px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 34px;
+    border-radius: 22px;
+    border: none;
+
+    &.button_dark {
+        background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+        @extend .main-bold-font;
+        color: $mainBgColor;
+        line-height: 34px;
+    }
+
+    &.button_light {
+        background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+        @extend .main-bold-font;
+        // color: $mainBgColor;
+        font-size: 0;
+        padding: 2px;
+
+        &::before {
+            content: "Войти";
+            display: block;
+            width: 83px;
+            @extend .main-bold-font;
+            color: $mainColor;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 22px;
+            background-color: $mainBgColor;
+        }
+    }
+
+    &.button_registration {
+        width: 196px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-image: linear-gradient(180deg, transparentize($mainColor, 0.5) 0%, transparentize($mainGradientColor, 0.5) 100%);
+    }
+
+    &:focus {
+        @extend .a11y;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
