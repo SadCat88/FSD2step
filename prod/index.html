@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
     <title>Home
     </title>
-  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.8b799ca27c622b33f09f.css" rel="stylesheet"><link href="./assets/pages/index/index.8b799ca27c622b33f09f.css" rel="stylesheet"></head>
+  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.fbf547ac5d85929eefac.css" rel="stylesheet"><link href="./assets/pages/index/index.fbf547ac5d85929eefac.css" rel="stylesheet"></head>
   <body>
     <header class="header">
       <div class="wrapper wrapper-header">
@@ -29,34 +30,43 @@
         </nav>
       </div>
     </header>
-    <main class="promo">
+    <main class="promo promo_bg-image">
       <div class="wrapper">
         <h1 class="visually-hidden">Сервис бронирования номеров в отелях</h1>
-        <p class="promo-heading">Лучшие номера для вашей работы, отдыха и просто вдохновения
-          <article class="find-room">
-            <fieldset>
-              <legend class="find-room__heading">Найдём номера под ваши пожелания</legend>
-              <form class="form find-room" method="post" action="https://echo.htmlacademy.ru">
-                <label class="form__label" for="arrivalDate">Прибытие</label>
-                <input class="form__input" type="date" name="arrivalDate" id="arrivalDate" required="required"/>
-                <label class="form__label" for="departureDate">Выезд</label>
-                <input class="form__input" type="date" name="departureDate" id="departureDate" required="required"/>
+        <p class="promo-heading">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
+        <article class="find-room">
+          <fieldset>
+            <legend class="find-room__heading">Найдём номера под ваши пожелания</legend>
+            <form class="form" method="post" action="https://echo.htmlacademy.ru">
+              <div class="date-w">
+                <div class="input-w input-date-w">
+                  <label class="form__label" for="arrivalDate">Прибытие</label>
+                  <input class="form__input" type="date" name="arrivalDate" id="arrivalDate" required="required"/>
+                </div>
+                <div class="input-w input-date-w">
+                  <label class="form__label" for="departureDate">Выезд</label>
+                  <input class="form__input" type="date" name="departureDate" id="departureDate" required="required"/>
+                </div>
+              </div>
+              <div class="input-w input-guests-w">
                 <label class="form__label" for="numOfResidents">Гости</label>
                 <input class="form__input" type="text" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required"/>
-                <input class="button button_form" type="submit" value="Подобрать номер"/>
-              </form>
-            </fieldset>
-          </article>
-        </p>
+              </div>
+              <input class="button button_form" type="submit" value="Подобрать номер"/>
+            </form>
+          </fieldset>
+        </article>
       </div>
     </main>
     <footer class="footer">
       <section class="main-footer">
-        <div class="wrapper">
-          <div class="logotype"><img src="assets/img/logo.svg" alt="Логотип"/>
-            <p class="visually-hidden">TOXIN</p>
+        <div class="wrapper main-footer-w">
+          <div class="logo-w">
+            <div class="logotype"><img src="assets/img/logo.svg" alt="Логотип"/>
+              <p class="visually-hidden">TOXIN</p>
+            </div>
+            <p class="footer-message">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
           </div>
-          <p class="footer-message">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
           <table class="footer-menu" border="1" cellpadding="5">
             <caption class="visually-hidden">Навигация по сайту</caption>
             <thead>
@@ -86,27 +96,32 @@
               <td>Инвесторы</td>
             </tr>
           </table>
-          <div class="subscribe">
+          <div class="subscribe"><b class="subscribe__heading">Подписка</b>
             <p class="subscribe__message">Получайте специальные предложения и новости сервиса</p>
             <form class="form" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="inputEmail">Введите почту для подписки:</label>
-              <input class="form__input" type="text" name="name" id="inputEmail" placeholder="Email" required="required"/>
-              <input class="button button_inner-input" type="submit" value="Подписаться"/>
+              <div class="inner-btn">
+                <input class="inner-btn__input form__input" type="text" name="name" id="inputEmail" placeholder="Email" required="required"/>
+                <div class="arrow-w">
+                  <label class="inner-btn__label" for="submitBtn"></label>
+                  <input class="inner-btn__button button visually-hidden" type="submit" value="Подписаться" tabindex="-1" id="submitBtn"/>
+                </div>
+              </div>
             </form>
           </div>
         </div>
       </section>
       <section class="second-footer">
-        <div class="wrapper">
+        <div class="wrapper second-footer-w">
           <p class="copyright">Copyright © 2018 Toxin отель. Все права заXищены.</p>
           <p class="visually-hidden">Наши соцсети:</p>
           <ul class="social">
-            <li class="social__twitter"><a href="#">Twitter</a></li>
-            <li class="social__facebook"><a href="#">Facebook</a></li>
-            <li class="social__instagram"><a href="#">Instagram</a></li>
+            <li><a class="social__item social__item_twitter" href="#">Twitter</a></li>
+            <li><a class="social__item social__item_facebook" href="#">Facebook</a></li>
+            <li><a class="social__item social__item_instagram" href="#">Instagram</a></li>
           </ul>
         </div>
       </section>
     </footer>
-  <script type="text/javascript" src="./assets/pages/vendors/vendors.8b799ca27c622b33f09f.js"></script><script type="text/javascript" src="./assets/pages/index/index.8b799ca27c622b33f09f.js"></script></body>
+  <script type="text/javascript" src="./assets/pages/vendors/vendors.fbf547ac5d85929eefac.js"></script><script type="text/javascript" src="./assets/pages/index/index.fbf547ac5d85929eefac.js"></script></body>
 </html>

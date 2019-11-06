@@ -26,6 +26,10 @@ h6 {
 
 a {
     text-decoration: none;
+
+    // &:focus {
+    //     @extend .a11y;
+    // }   
 }
 
 ul,
@@ -40,4 +44,8 @@ fieldset,
 figure {
     margin: 0;
     padding: 0;
+}
+
+fieldset {
+    border: none;
 }

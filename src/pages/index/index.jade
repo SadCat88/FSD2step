@@ -19,28 +19,33 @@ block body
                         a(href="#").button.button_light.button_input Войти
                     li.user-menu__registration
                         a(href="#").button.button_dark.button_registration Зарегистрироваться
-    main.promo
+    main.promo.promo_bg-image
         .wrapper
             h1.visually-hidden Сервис бронирования номеров в отелях
             p.promo-heading Лучшие номера для вашей работы, отдыха и просто вдохновения
-                article.find-room
-                    fieldset
-                        legend.find-room__heading Найдём номера под ваши пожелания
-                        form.form.find-room(method="post" action="https://echo.htmlacademy.ru")
-                            label.form__label(for="arrivalDate") Прибытие
-                            input.form__input(type="date" name="arrivalDate" id="arrivalDate" required="required")
-                            label.form__label(for="departureDate") Выезд
-                            input.form__input(type="date" name="departureDate" id="departureDate" required="required")
+            article.find-room
+                fieldset
+                    legend.find-room__heading Найдём номера под ваши пожелания
+                    form.form(method="post" action="https://echo.htmlacademy.ru")
+                        .date-w
+                            .input-w.input-date-w
+                                label.form__label(for="arrivalDate") Прибытие
+                                input.form__input(type="date" name="arrivalDate" id="arrivalDate" required="required")
+                            .input-w.input-date-w
+                                label.form__label(for="departureDate") Выезд
+                                input.form__input(type="date" name="departureDate" id="departureDate" required="required")
+                        .input-w.input-guests-w
                             label.form__label(for="numOfResidents") Гости
                             input.form__input(type="text" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required")
-                            input.button.button_form(type="submit" value="Подобрать номер")
+                        input.button.button_form(type="submit" value="Подобрать номер")
     footer.footer
         section.main-footer
-            .wrapper
-                div.logotype
-                    img(src="assets/img/logo.svg" alt="Логотип")
-                    p.visually-hidden TOXIN
-                p.footer-message Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            .wrapper.main-footer-w
+                .logo-w
+                    div.logotype
+                        img(src="assets/img/logo.svg" alt="Логотип")
+                        p.visually-hidden TOXIN
+                    p.footer-message Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
                 table(border="1" cellpadding="5" ).footer-menu
                     caption.visually-hidden Навигация по сайту
                     thead
@@ -64,20 +69,25 @@ block body
                         td Услуги
                         td Инвесторы
                 div.subscribe
+                    b.subscribe__heading.
+                        Подписка
                     p.subscribe__message.
                         Получайте специальные предложения и новости сервиса
                     form.form(method="post" action="https://echo.htmlacademy.ru")
                         label.visually-hidden(for="inputEmail") Введите почту для подписки:
-                        input.form__input(type="text" name="name" id="inputEmail" placeholder="Email" required="required")
-                        input.button.button_inner-input(type="submit" value="Подписаться")
+                        .inner-btn
+                            input.inner-btn__input.form__input(type="text" name="name" id="inputEmail" placeholder="Email" required="required")
+                            .arrow-w
+                                label.inner-btn__label(for="submitBtn")
+                                input.inner-btn__button.button.visually-hidden(type="submit" value="Подписаться" tabindex="-1" id="submitBtn")
         section.second-footer
-            .wrapper
+            .wrapper.second-footer-w
                 p.copyright Copyright © 2018 Toxin отель. Все права заXищены.
                 p.visually-hidden Наши соцсети:
                 ul.social
-                    li.social__twitter
-                        a(href="#") Twitter
-                    li.social__facebook
-                        a(href="#") Facebook
-                    li.social__instagram
-                        a(href="#") Instagram
+                    li
+                        a.social__item.social__item_twitter(href="#") Twitter
+                    li
+                        a.social__item.social__item_facebook(href="#") Facebook
+                    li
+                        a.social__item.social__item_instagram(href="#") Instagram

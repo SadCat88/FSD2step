@@ -11,9 +11,19 @@ module.exports = function() {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              //   маска для сохранения файлов - имя
+              // маска для сохранения файлов - имя
+              publicPatch() {
+                if (process.env.NODE_ENV === 'development') {
+                  return `${baseConfig.pathVars.PATHS.assets}/img`;
+                }
+                else {
+                  return `../../img`;
+                }
+              },
+              // publicPath: `../../img`,
+              // путь для указания html и css
               outputPath: `${baseConfig.pathVars.PATHS.assets}/img`
-              //   маска для сохранения файлов - путь
+              // маска для сохранения файлов - путь
             }
           }
         }

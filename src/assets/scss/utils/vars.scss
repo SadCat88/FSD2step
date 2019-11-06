@@ -9,6 +9,14 @@
 $mainBgColor: #ffffff;
 $mainColor: #BC9CFF;
 $mainGradientColor: #8BA4F9;
+$secondColor: #6FCF97;
+$dark100: #1F2041;
+$dark75: rgba(31, 32, 65, 0.75);
+$dark50: rgba(31, 32, 65, 0.50);
+$dark25: rgba(31, 32, 65, 0.25);
+$dark05: rgba(31, 32, 65, 0.05);
+
+
 
 // Screen ==========================
 $desktopWidth : 1280px;
@@ -39,7 +47,7 @@ $smPhoneWidth : 320px;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
+    color: $dark75;
 }
 
 // 
@@ -51,7 +59,7 @@ $smPhoneWidth : 320px;
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
-    color: #1F2041;
+    color: $dark100;
 }
 
 // 
@@ -64,7 +72,7 @@ $smPhoneWidth : 320px;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: #1F2041;
+    color: $dark100;
 }
 
 // 
@@ -76,7 +84,7 @@ $smPhoneWidth : 320px;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-    color: rgba(31, 32, 65, 0.5);
+    color: $dark50;
 }
 
 // 
@@ -88,7 +96,7 @@ $smPhoneWidth : 320px;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
-    color: rgba(31, 32, 65, 0.75);
+    color: $dark75;
 }
 
 // 
@@ -100,7 +108,7 @@ $smPhoneWidth : 320px;
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
-    color: rgba(31, 32, 65, 0.5);
+    color: $dark50;
 }
 
 // 
@@ -124,6 +132,13 @@ $smPhoneWidth : 320px;
 
     /* Support for IE. */
     font-feature-settings: 'liga';
+}
+
+// 
+// Font Awesome 5
+.awesome-font {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 900;
 }
 
 // 

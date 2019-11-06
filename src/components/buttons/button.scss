@@ -41,6 +41,16 @@
         width: 196px;
     }
 
+    &.button_form {
+        height: 44px;
+        width: 100%;
+        background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+        @extend .main-bold-font;
+        color: $mainBgColor;
+        line-height: 34px;
+    }
+
+
     &:hover {
         cursor: pointer;
         background-image: linear-gradient(180deg, transparentize($mainColor, 0.5) 0%, transparentize($mainGradientColor, 0.5) 100%);
