@@ -37,7 +37,9 @@
             @extend .main-page-heading;
         }
 
+
         .input-w {
+            position: relative;
             display: flex;
             flex-direction: column;
 
@@ -54,9 +56,46 @@
             display: flex;
             justify-content: space-between;
 
-            .form__input {
-                padding: 10px 0 10px 15px;
-                text-transform: uppercase;
+            .input-date-w {
+                min-width: 150px;
+
+                .form__input {
+                    padding: 10px 0 10px 15px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .form__input {
+            position: relative;
+            z-index: 1;
+            &::placeholder {
+                line-height: 44px;
+            }
+        }
+
+        .form__label {
+            &::after {
+                content: "expand_more";
+                position: absolute;
+                z-index: 2;
+                right: 1px;
+                top: 21px;
+                display: inline-block;
+                width: 48px;
+                height: 42px;
+                border-radius: 4px;
+                @extend .icons-font;
+                font-size: 24px;
+                line-height: 44px;
+                text-align: center;
+                background-color: $mainBgColor;
+                color: $dark50;
+
+                @supports (-ms-ime-align: auto) {
+                    /* Edge */
+                    line-height: 52px;
+                }
             }
         }
     }
@@ -88,191 +127,3 @@
 }
 
 // блок =================================================================
-
-.footer {
-    padding-top: 104px;
-
-    .main-footer {
-        border-bottom: 1px solid #d2d2d5;
-    }
-
-    .main-footer-w {
-        margin-bottom: 83px;
-        display: flex;
-        justify-content: space-between;
-
-        .logo-w {
-            display: flex;
-            flex-direction: column;
-            margin-top: -5px;
-
-            .footer-message {
-                width: 250px;
-            }
-
-            .logotype {
-                margin-bottom: 20px;
-            }
-        }
-
-        .footer-menu {
-            flex-grow: 1;
-            margin: 0 20px 0 60px;
-            border-collapse: collapse;
-            border: none;
-
-            td,
-            th {
-                border: none;
-                padding: 0 0 20px 0;
-            }
-
-            th {
-                @extend .main-bold-font;
-                text-align: left;
-            }
-
-            td {
-                width: 33%;
-                @extend .inter-font;
-            }
-        }
-
-        .subscribe {
-            width: 260px;
-
-            .subscribe__heading {
-                display: block;
-                padding-bottom: 20px;
-                @extend .main-bold-font;
-            }
-
-            .subscribe__message {
-                width: 250px;
-                padding-bottom: 20px;
-            }
-
-
-            .inner-btn {
-                position: relative;
-
-                .inner-btn__input {
-                    width: 100%;
-                    padding: 0 59px 0 15px;
-
-                    &::placeholder {
-                        color: $dark25;
-                    }
-                }
-
-                .arrow-w {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-
-                    .inner-btn__label {
-                        display: inline-block;
-                        width: 44px;
-                        height: 44px;
-
-                        &::after {
-                            content: "arrow_forward";
-                            display: inline-block;
-                            width: 44px;
-                            height: 44px;
-                            @extend .icons-font;
-
-                            font-size: 24px;
-                            line-height: 44px;
-                            text-align: center;
-                            color: transparent;
-                            -webkit-background-clip: text;
-                            background-clip: text;
-                            background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
-
-                        }
-
-                        @keyframes ArrowMove {
-                            0% {
-                                transform: translate(0);
-                            }
-
-                            100% {
-                                transform: translate(10px);
-                            }
-                        }
-
-                        &:hover {
-                            cursor: pointer;
-
-                            &::after {
-                                color: $dark50;
-                                animation-name: ArrowMove;
-                                animation-duration: 1s;
-                                animation-timing-function: ease-in-out;
-                                animation-iteration-count: infinite;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .second-footer-w {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 23px;
-
-        .social {
-            display: flex;
-
-            .social__item {
-                margin-left: 20px;
-                font-size: 0;
-                outline: none;
-
-
-                &::after {
-                    content: "";
-
-                    display: inline-block;
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 4px;
-
-                    @extend .awesome-font;
-                    font-size: 24px;
-                    line-height: 25px;
-                    text-align: center;
-                    color: transparent;
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
-
-                    &:focus {
-                        @extend .a11y;
-                    }
-                }
-
-                &:hover::after {
-                    color: $dark50;
-                }
-
-                &.social__item_twitter::after {
-                    content: "\f099";
-                }
-
-                &.social__item_facebook::after {
-                    content: "\f082";
-                }
-
-                &.social__item_instagram::after {
-                    content: "\f16d";
-                }
-
-
-            }
-        }
-    }
-}

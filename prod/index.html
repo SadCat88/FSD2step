@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
     <title>Home
     </title>
-  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.fbf547ac5d85929eefac.css" rel="stylesheet"><link href="./assets/pages/index/index.fbf547ac5d85929eefac.css" rel="stylesheet"></head>
+  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.cb97081abd277db8f757.css" rel="stylesheet"><link href="./assets/pages/index/index.cb97081abd277db8f757.css" rel="stylesheet"></head>
   <body>
     <header class="header">
       <div class="wrapper wrapper-header">
-        <div class="logotype"><img src="assets/img/logo.svg" alt="Логотип"/>
+        <div class="logotype"><a class="logotype-link" href="#"><img src="assets/img/logo.svg" alt="Логотип"/></a>
           <p class="visually-hidden">TOXIN</p>
         </div>
         <nav class="header-navigation">
           <ul class="header-menu">
-            <li class="main-menu__item">О нас</li>
-            <li class="main-menu__item main-menu__submenu">Услуги</li>
-            <li class="main-menu__item">Вакансии</li>
-            <li class="main-menu__item">Новости</li>
-            <li class="main-menu__item main-menu__submenu">Соглашения</li>
+            <li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">О нас</a></li>
+            <li class="main-menu__item"><a class="main-menu__item-link __interactive-link main-menu__submenu" href="#">Услуги</a></li>
+            <li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">Вакансии</a></li>
+            <li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">Новости</a></li>
+            <li class="main-menu__item"><a class="main-menu__item-link __interactive-link main-menu__submenu" href="#">Соглашения</a></li>
           </ul>
           <ul class="user-menu">
             <li class="user-menu__input"><a class="button button_light button_input" href="#">Войти</a></li>
@@ -41,18 +41,21 @@
               <div class="date-w">
                 <div class="input-w input-date-w">
                   <label class="form__label" for="arrivalDate">Прибытие</label>
-                  <input class="form__input" type="date" name="arrivalDate" id="arrivalDate" required="required"/>
+                  <input class="form__input" type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required"/>
                 </div>
                 <div class="input-w input-date-w">
                   <label class="form__label" for="departureDate">Выезд</label>
-                  <input class="form__input" type="date" name="departureDate" id="departureDate" required="required"/>
+                  <input class="form__input" type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required"/>
                 </div>
               </div>
               <div class="input-w input-guests-w">
                 <label class="form__label" for="numOfResidents">Гости</label>
                 <input class="form__input" type="text" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required"/>
               </div>
-              <input class="button button_form" type="submit" value="Подобрать номер"/>
+              <div class="button-arrow">
+                <input class="button button_form button-arrow__button" type="submit" id="roomBtn" value="Подобрать номер"/>
+                <label class="button-arrow__label" for="roomBtn"></label>
+              </div>
             </form>
           </fieldset>
         </article>
@@ -67,44 +70,47 @@
             </div>
             <p class="footer-message">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
           </div>
-          <table class="footer-menu" border="1" cellpadding="5">
-            <caption class="visually-hidden">Навигация по сайту</caption>
-            <thead>
-              <tr>
-                <th>Навигация</th>
-                <th>О нас</th>
-                <th>Служба поддержки</th>
-              </tr>
-            </thead>
-            <tr>
-              <td>О нас</td>
-              <td>О сервисе</td>
-              <td>Соглашения</td>
-            </tr>
-            <tr>
-              <td>Новости</td>
-              <td>Наша команда</td>
-              <td>Сообщество</td>
-            </tr>
-            <tr>
-              <td>Служба поддержки</td>
-              <td>Вакансии</td>
-              <td>Связь с нами</td>
-            </tr>
-            <tr>
-              <td>Услуги</td>
-              <td>Инвесторы</td>
-            </tr>
-          </table>
+          <nav class="footer-navigation">
+            <h3 class="visually-hidden">Навигация по сайту</h3>
+            <ul class="footer-menu">
+              <li class="footer-menu__item footer-menu__heading">Навигация
+                <ul class="footer-menu__item-submenu">
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">О нас</a></li>
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Новости</a></li>
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Служба поддержки</a></li>
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">
+                      Услуги
+                      </a></li>
+                </ul>
+              </li>
+              <li class="footer-menu__item footer-menu__heading">О нас
+                <ul class="footer-menu__item-submenu">
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">О сервисе</a></li>
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Наша команда</a></li>
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Вакансии</a></li>
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">
+                      Инвесторы
+                      </a></li>
+                </ul>
+              </li>
+              <li class="footer-menu__item footer-menu__heading">Служба поддержки
+                <ul class="footer-menu__item-submenu">
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Соглашения</a></li>
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Сообщество</a></li>
+                  <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Связь с нами                 </a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
           <div class="subscribe"><b class="subscribe__heading">Подписка</b>
             <p class="subscribe__message">Получайте специальные предложения и новости сервиса</p>
             <form class="form" method="post" action="https://echo.htmlacademy.ru">
-              <label class="visually-hidden" for="inputEmail">Введите почту для подписки:</label>
+              <label class="visually-hidden hidden__label" for="inputEmail">Введите почту для подписки:</label>
               <div class="inner-btn">
                 <input class="inner-btn__input form__input" type="text" name="name" id="inputEmail" placeholder="Email" required="required"/>
                 <div class="arrow-w">
-                  <label class="inner-btn__label" for="submitBtn"></label>
-                  <input class="inner-btn__button button visually-hidden" type="submit" value="Подписаться" tabindex="-1" id="submitBtn"/>
+                  <label class="inner-btn__label" for="subscribeBtn"></label>
+                  <input class="inner-btn__button button visually-hidden" type="submit" value="Подписаться" tabindex="-1" id="subscribeBtn"/>
                 </div>
               </div>
             </form>
@@ -123,5 +129,5 @@
         </div>
       </section>
     </footer>
-  <script type="text/javascript" src="./assets/pages/vendors/vendors.fbf547ac5d85929eefac.js"></script><script type="text/javascript" src="./assets/pages/index/index.fbf547ac5d85929eefac.js"></script></body>
+  <script type="text/javascript" src="./assets/pages/vendors/vendors.cb97081abd277db8f757.js"></script><script type="text/javascript" src="./assets/pages/index/index.cb97081abd277db8f757.js"></script></body>
 </html>

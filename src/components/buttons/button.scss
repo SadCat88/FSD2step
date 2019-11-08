@@ -42,6 +42,7 @@
     }
 
     &.button_form {
+        position: relative;
         height: 44px;
         width: 100%;
         background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
@@ -49,7 +50,6 @@
         color: $mainBgColor;
         line-height: 34px;
     }
-
 
     &:hover {
         cursor: pointer;
@@ -62,5 +62,58 @@
 
     &:active {
         box-shadow: none;
+    }
+}
+
+.button-arrow {
+    position: relative;
+
+    .button-arrow__label {
+        &::after {
+            content: "arrow_forward";
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            @extend .icons-font;
+            font-size: 24px;
+            line-height: 44px;
+            text-align: center;
+            color: $mainBgColor;
+
+            @supports (-ms-ime-align: auto) {
+                line-height: 52px;
+            }
+        }
+
+        @keyframes ArrowMove {
+            0% {
+                transform: translate(0);
+            }
+
+            100% {
+                transform: translate(10px);
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+        }
+
+
+    }
+
+    .button-arrow__button {
+
+        &:hover+.button-arrow__label::after {
+            animation-name: ArrowMove;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
     }
 }

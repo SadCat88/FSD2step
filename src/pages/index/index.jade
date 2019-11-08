@@ -5,15 +5,26 @@ block body
     header.header
         .wrapper.wrapper-header
             div.logotype
-                img(src="assets/img/logo.svg" alt="Логотип")
+                a.logotype-link(href="#")
+                    img(src="assets/img/logo.svg" alt="Логотип")
                 p.visually-hidden TOXIN
             nav.header-navigation
                 ul.header-menu
-                    li.main-menu__item О нас
-                    li.main-menu__item.main-menu__submenu Услуги
-                    li.main-menu__item Вакансии
-                    li.main-menu__item Новости
-                    li.main-menu__item.main-menu__submenu Соглашения
+                    li.main-menu__item
+                        a.main-menu__item-link.__interactive-link(href="#").
+                            О нас
+                    li.main-menu__item
+                        a.main-menu__item-link.__interactive-link.main-menu__submenu(href="#").
+                            Услуги
+                    li.main-menu__item
+                        a.main-menu__item-link.__interactive-link(href="#").
+                            Вакансии
+                    li.main-menu__item
+                        a.main-menu__item-link.__interactive-link(href="#").
+                            Новости
+                    li.main-menu__item
+                        a.main-menu__item-link.__interactive-link.main-menu__submenu(href="#").
+                            Соглашения
                 ul.user-menu
                     li.user-menu__input
                         a(href="#").button.button_light.button_input Войти
@@ -30,14 +41,16 @@ block body
                         .date-w
                             .input-w.input-date-w
                                 label.form__label(for="arrivalDate") Прибытие
-                                input.form__input(type="date" name="arrivalDate" id="arrivalDate" required="required")
+                                input.form__input(type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required")
                             .input-w.input-date-w
                                 label.form__label(for="departureDate") Выезд
-                                input.form__input(type="date" name="departureDate" id="departureDate" required="required")
+                                input.form__input(type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required")
                         .input-w.input-guests-w
                             label.form__label(for="numOfResidents") Гости
                             input.form__input(type="text" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required")
-                        input.button.button_form(type="submit" value="Подобрать номер")
+                        .button-arrow
+                            input.button.button_form.button-arrow__button(type="submit" id="roomBtn" value="Подобрать номер")
+                            label.button-arrow__label(for="roomBtn")
     footer.footer
         section.main-footer
             .wrapper.main-footer-w
@@ -46,40 +59,62 @@ block body
                         img(src="assets/img/logo.svg" alt="Логотип")
                         p.visually-hidden TOXIN
                     p.footer-message Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-                table(border="1" cellpadding="5" ).footer-menu
-                    caption.visually-hidden Навигация по сайту
-                    thead
-                        tr
-                            th Навигация
-                            th О нас
-                            th Служба поддержки
-                    tr
-                        td О нас
-                        td О сервисе
-                        td Соглашения
-                    tr
-                        td Новости
-                        td Наша команда
-                        td Сообщество
-                    tr
-                        td Служба поддержки
-                        td Вакансии
-                        td Связь с нами
-                    tr
-                        td Услуги
-                        td Инвесторы
+                nav.footer-navigation
+                    h3.visually-hidden Навигация по сайту
+                    ul.footer-menu
+                        li.footer-menu__item.footer-menu__heading Навигация
+                            ul.footer-menu__item-submenu
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        О нас
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Новости
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Служба поддержки
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Услуги
+
+                        li.footer-menu__item.footer-menu__heading О нас
+                            ul.footer-menu__item-submenu
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        О сервисе
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Наша команда
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Вакансии
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Инвесторы
+
+                        li.footer-menu__item.footer-menu__heading Служба поддержки
+                            ul.footer-menu__item-submenu
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Соглашения
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Сообщество
+                                li.footer-menu__item 
+                                    a.footer-menu__item-link.__interactive-link(href="#").
+                                        Связь с нами                 
                 div.subscribe
                     b.subscribe__heading.
                         Подписка
                     p.subscribe__message.
                         Получайте специальные предложения и новости сервиса
                     form.form(method="post" action="https://echo.htmlacademy.ru")
-                        label.visually-hidden(for="inputEmail") Введите почту для подписки:
+                        label.visually-hidden.hidden__label(for="inputEmail") Введите почту для подписки:
                         .inner-btn
                             input.inner-btn__input.form__input(type="text" name="name" id="inputEmail" placeholder="Email" required="required")
                             .arrow-w
-                                label.inner-btn__label(for="submitBtn")
-                                input.inner-btn__button.button.visually-hidden(type="submit" value="Подписаться" tabindex="-1" id="submitBtn")
+                                label.inner-btn__label(for="subscribeBtn")
+                                input.inner-btn__button.button.visually-hidden(type="submit" value="Подписаться" tabindex="-1" id="subscribeBtn")
         section.second-footer
             .wrapper.second-footer-w
                 p.copyright Copyright © 2018 Toxin отель. Все права заXищены.

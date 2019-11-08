@@ -1,4 +1,5 @@
 // Модуль конфига для копирования картинок (file-loader)
+// В режиме WDS необходимо отменить publicPath
 const baseConfig = require("../../webpack.config.js");
 
 module.exports = function() {
@@ -12,7 +13,7 @@ module.exports = function() {
             options: {
               name: "[name].[ext]",
               // маска для сохранения файлов - имя
-              publicPath: `../../img`,
+              // publicPath: `../../img`,
               // путь для добавления к картинкам в html и css
               outputPath: `${baseConfig.pathVars.PATHS.assets}/img`
               // маска для сохранения файлов - путь

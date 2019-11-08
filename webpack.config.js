@@ -33,6 +33,7 @@ const provide = require("./webpack/common/provide.js");
 const prodExtractCSS = require("./webpack/prod/prod.css.extract.js");
 const chunks = require("./webpack/common/chunks.js");
 const imgCopy = require("./webpack/common/imgcopy.js");
+const wdsImgCopy = require("./webpack/dev/wds.imgcopy");
 const filesCopy = require("./webpack/common/filescopy.js");
 // ===========================================================
 
@@ -50,6 +51,11 @@ const PATHS = {
   prod: path.join(__dirname, "./prod"),
   assets: "assets"
 };
+
+// console.log("env main kek = " + env);
+// const ENV = env;
+// console.log("ENV main kek = " + ENV);
+// exports.imgCopyEnv = { ENV };
 
 // экспорт локальных переменных для обращения через другие конфиги
 exports.pathVars = { PATHS };
@@ -161,7 +167,6 @@ const baseWebpackConfig = merge([
   },
   // вызов остальных констант для merge
   provide(),
-  imgCopy(),
   filesCopy()
 ]);
 
@@ -194,7 +199,8 @@ const devBuildWebpackConfig = merge([
   // ↓ вызов остальных констант для merge
   devpug(),
   devExtractCSS(),
-  chunks()
+  chunks(),
+  imgCopy(),
 ]);
 
 // ↓ Production часть конфига==============================================
@@ -232,7 +238,8 @@ module.exports = function(env) {
       // ↓ вызов остальных констант для merge
       prodpug(),
       prodExtractCSS(),
-      chunks()
+      chunks(),
+      imgCopy(),
     ]);
   }
   // ↓ Development + Server часть конфига====================================
@@ -252,7 +259,8 @@ module.exports = function(env) {
       devpug(),
       devsass(),
       devcss(),
-      chunks()
+      chunks(),
+      wdsImgCopy(),
     ]);
   }
   // ↓ Devbuild часть конфига================================================

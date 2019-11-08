@@ -1,4 +1,5 @@
 @import '../../assets/scss/utils/vars.scss';
+@import '../../components/__interactive-link/__interactive-link';
 
 .header {
     position: relative;
@@ -16,22 +17,82 @@
 
     .wrapper-header {
         justify-content: space-between;
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            justify-content: flex-end;
+        }
+    }
+
+    .logotype {
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            position: absolute;
+            left: 0;
+        }
+
+        .logotype-link {
+            display: block;
+            border-radius: 22px;
+
+            &:focus {
+                @extend .a11y;
+            }
+
+            &:active {
+                box-shadow: none;
+            }
+        }
     }
 
     .header-navigation {
         align-items: baseline;
+
         padding: 3px 0 0 0;
         @extend .inter-font;
 
-        .main-menu__item {
-            padding-right: 20px;
+        .header-menu {
+            position: relative;
         }
 
-        .main-menu__submenu::after {
-            content: "expand_more";
-            @extend .icons-font;
-            font-size: 24px;
+        .main-menu__item {
+            padding-right: 10px;
+
+            .main-menu__item-link {
+
+                padding: 3px 5px;
+                @extend .inter-font;
+
+                &:hover {
+                    color: $mainColor;
+                }
+
+
+                &.main-menu__submenu {
+                    @supports (-ms-ime-align: auto) {
+                        /* Edge */
+                        padding-right: 30px;
+
+                    }
+
+                    &::after {
+                        content: "expand_more";
+                        @extend .icons-font;
+                        font-size: 24px;
+
+                        @supports (-ms-ime-align: auto) {
+                            /* Edge */
+                            position: absolute;
+                            top: 75%;
+
+                        }
+                    }
+                }
+
+            }
         }
+
 
         .user-menu__registration {
             padding-left: 20px;
