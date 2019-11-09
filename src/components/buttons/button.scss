@@ -18,23 +18,52 @@
     }
 
     &.button_light {
+        padding: 2px;
+        width: 87px;
         background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
         @extend .main-bold-font;
-        // color: $mainBgColor;
         font-size: 0;
-        padding: 2px;
 
         &::before {
-            content: "Войти";
             display: block;
-            width: 83px;
             @extend .main-bold-font;
             color: $mainColor;
-            height: 30px;
-            line-height: 30px;
             border-radius: 22px;
             background-color: $mainBgColor;
         }
+
+        &.button_light-input::before {
+            content: "Войти";
+            width: 83px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        &.button_light-create {
+            width: 99px;
+            height: 44px;
+
+            &::before {
+                content: "Создать";
+                width: 95px;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+
+        &.button_light-login {
+            width: 99px;
+            height: 44px;
+
+            &::before {
+                content: "Войти";
+                width: 95px;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+
+
     }
 
     &.button_registration {
@@ -69,6 +98,7 @@
     position: relative;
 
     .button-arrow__label {
+
         &::after {
             content: "arrow_forward";
             position: absolute;

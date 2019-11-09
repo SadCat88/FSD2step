@@ -100,6 +100,16 @@
                     right: 0;
                     top: 0;
 
+                    .inner-btn__button {
+                        width: 0;
+                        height: 0;
+                        font-size: 0;
+
+                        &:hover {
+                            box-shadow: none;
+                        }
+                    }
+
                     .inner-btn__label {
                         display: inline-block;
                         width: 44px;

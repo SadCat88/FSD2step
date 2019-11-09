@@ -1,0 +1,75 @@
+footer.footer
+    section.main-footer
+        .wrapper.main-footer-w
+            .logo-w
+                div.logotype
+                    img(src="assets/img/logo.svg" alt="Логотип")
+                    p.visually-hidden TOXIN
+                p.footer-message Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            nav.footer-navigation
+                h3.visually-hidden Навигация по сайту
+                ul.footer-menu
+                    li.footer-menu__item.footer-menu__heading Навигация
+                        ul.footer-menu__item-submenu
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    О нас
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Новости
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Служба поддержки
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Услуги
+
+                    li.footer-menu__item.footer-menu__heading О нас
+                        ul.footer-menu__item-submenu
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    О сервисе
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Наша команда
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Вакансии
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Инвесторы
+
+                    li.footer-menu__item.footer-menu__heading Служба поддержки
+                        ul.footer-menu__item-submenu
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Соглашения
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Сообщество
+                            li.footer-menu__item 
+                                a.footer-menu__item-link.__interactive-link(href="#").
+                                    Связь с нами                 
+            div.subscribe
+                b.subscribe__heading.
+                    Подписка
+                p.subscribe__message.
+                    Получайте специальные предложения и новости сервиса
+                form.form(method="post" action="https://echo.htmlacademy.ru")
+                    label.visually-hidden.hidden__label(for="subscribeEmail") Введите почту для подписки:
+                    .inner-btn
+                        input.inner-btn__input.form__input(type="text" name="name" id="subscribeEmail" placeholder="Email" required="required")
+                        .arrow-w
+                            label.inner-btn__label(for="subscribeBtn")
+                            input.inner-btn__button.button.visually-hidden(type="submit" value="Подписаться" tabindex="-1" id="subscribeBtn")
+    section.second-footer
+        .wrapper.second-footer-w
+            p.copyright Copyright © 2018 Toxin отель. Все права заXищены.
+            p.visually-hidden Наши соцсети:
+            ul.social
+                li
+                    a.social__item.social__item_twitter(href="#") Twitter
+                li
+                    a.social__item.social__item_facebook(href="#") Facebook
+                li
+                    a.social__item.social__item_instagram(href="#") Instagram

@@ -6,6 +6,7 @@
     padding: 15px 0 0 0;
     min-height: 70px;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    background-color: $mainBgColor;
 
 
     .wrapper-header,
@@ -60,12 +61,20 @@
             padding-right: 10px;
 
             .main-menu__item-link {
-
                 padding: 3px 5px;
+                border-radius: 22px;
                 @extend .inter-font;
 
                 &:hover {
                     color: $mainColor;
+                }
+
+                &:focus {
+                    @extend .a11y;
+                }
+
+                &:active {
+                    box-shadow: none;
                 }
 
 
@@ -89,10 +98,44 @@
                         }
                     }
                 }
-
             }
         }
 
+        .main-menu__item:hover .header-submenu {z-index: 0;}
+        .main-menu__item:focus-within .header-submenu {
+            z-index: 0;
+        }
+
+        .header-submenu {
+            position: absolute;
+            z-index: -100;
+            background-color: $mainBgColor;
+
+            border-radius: 4px;
+            margin: -5px 0 0 20px;
+            padding: 10px 5px;
+
+            .header-submenu__item {
+                .main-menu__item-link {
+                    white-space: nowrap;
+                    display: inline-block;
+                    padding: 5px 25px;
+                }
+            }
+        }
+
+        // _:-ms-lang(x),
+        // .main-menu__item:hover .header-submenu {
+        //     z-index: 0;
+        // }
+        // _:-ms-lang(x),
+        // .header-submenu__item:focus .header-submenu {
+        //     z-index: 0;
+        // }
+
+        .user-menu__input {
+            z-index: 2;
+        }
 
         .user-menu__registration {
             padding-left: 20px;

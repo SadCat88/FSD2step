@@ -2,127 +2,70 @@ extends ../../templates/base.jade
 block title
     | Home
 block body
-    header.header
-        .wrapper.wrapper-header
-            div.logotype
-                a.logotype-link(href="#")
-                    img(src="assets/img/logo.svg" alt="Логотип")
-                p.visually-hidden TOXIN
-            nav.header-navigation
-                ul.header-menu
-                    li.main-menu__item
-                        a.main-menu__item-link.__interactive-link(href="#").
-                            О нас
-                    li.main-menu__item
-                        a.main-menu__item-link.__interactive-link.main-menu__submenu(href="#").
-                            Услуги
-                    li.main-menu__item
-                        a.main-menu__item-link.__interactive-link(href="#").
-                            Вакансии
-                    li.main-menu__item
-                        a.main-menu__item-link.__interactive-link(href="#").
-                            Новости
-                    li.main-menu__item
-                        a.main-menu__item-link.__interactive-link.main-menu__submenu(href="#").
-                            Соглашения
-                ul.user-menu
-                    li.user-menu__input
-                        a(href="#").button.button_light.button_input Войти
-                    li.user-menu__registration
-                        a(href="#").button.button_dark.button_registration Зарегистрироваться
+    include ../../components/header/header.jade
     main.promo.promo_bg-image
         .wrapper
             h1.visually-hidden Сервис бронирования номеров в отелях
             p.promo-heading Лучшие номера для вашей работы, отдыха и просто вдохновения
-            article.find-room
+            article.panel
                 fieldset
-                    legend.find-room__heading Найдём номера под ваши пожелания
+                    legend.panel__heading Найдём номера под ваши пожелания
                     form.form(method="post" action="https://echo.htmlacademy.ru")
-                        .date-w
-                            .input-w.input-date-w
-                                label.form__label(for="arrivalDate") Прибытие
-                                input.form__input(type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required")
-                            .input-w.input-date-w
-                                label.form__label(for="departureDate") Выезд
-                                input.form__input(type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required")
-                        .input-w.input-guests-w
-                            label.form__label(for="numOfResidents") Гости
-                            input.form__input(type="text" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required")
+                        .two-inputs-w
+                            .input-w.input-small-w
+                                label.form__label.form__label_date(for="arrivalDate") Прибытие
+                                input.form__input.form__input_date(type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required")
+                            .input-w.input-small-w
+                                label.form__label.form__label_date(for="departureDate") Выезд
+                                input.form__input.form__input_date(type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required")
+                        .input-w.input-large-w
+                            label.form__label.form__label_date(for="numOfResidents") Гости
+                            input.form__input(type="email" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required")
                         .button-arrow
                             input.button.button_form.button-arrow__button(type="submit" id="roomBtn" value="Подобрать номер")
                             label.button-arrow__label(for="roomBtn")
-    footer.footer
-        section.main-footer
-            .wrapper.main-footer-w
-                .logo-w
-                    div.logotype
-                        img(src="assets/img/logo.svg" alt="Логотип")
-                        p.visually-hidden TOXIN
-                    p.footer-message Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-                nav.footer-navigation
-                    h3.visually-hidden Навигация по сайту
-                    ul.footer-menu
-                        li.footer-menu__item.footer-menu__heading Навигация
-                            ul.footer-menu__item-submenu
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        О нас
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Новости
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Служба поддержки
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Услуги
-
-                        li.footer-menu__item.footer-menu__heading О нас
-                            ul.footer-menu__item-submenu
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        О сервисе
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Наша команда
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Вакансии
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Инвесторы
-
-                        li.footer-menu__item.footer-menu__heading Служба поддержки
-                            ul.footer-menu__item-submenu
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Соглашения
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Сообщество
-                                li.footer-menu__item 
-                                    a.footer-menu__item-link.__interactive-link(href="#").
-                                        Связь с нами                 
-                div.subscribe
-                    b.subscribe__heading.
-                        Подписка
-                    p.subscribe__message.
-                        Получайте специальные предложения и новости сервиса
-                    form.form(method="post" action="https://echo.htmlacademy.ru")
-                        label.visually-hidden.hidden__label(for="inputEmail") Введите почту для подписки:
-                        .inner-btn
-                            input.inner-btn__input.form__input(type="text" name="name" id="inputEmail" placeholder="Email" required="required")
-                            .arrow-w
-                                label.inner-btn__label(for="subscribeBtn")
-                                input.inner-btn__button.button.visually-hidden(type="submit" value="Подписаться" tabindex="-1" id="subscribeBtn")
-        section.second-footer
-            .wrapper.second-footer-w
-                p.copyright Copyright © 2018 Toxin отель. Все права заXищены.
-                p.visually-hidden Наши соцсети:
-                ul.social
-                    li
-                        a.social__item.social__item_twitter(href="#") Twitter
-                    li
-                        a.social__item.social__item_facebook(href="#") Facebook
-                    li
-                        a.social__item.social__item_instagram(href="#") Instagram
+    include ../../components/footer/footer.jade
+    article(id="signIn").panel.panel_modal.panel_come-in
+        fieldset
+            legend.panel__heading Войти
+            form.form(method="post" action="https://echo.htmlacademy.ru")
+                label.visually-hidden(for="login") Введите почту в качестве логина:
+                input.form__input(type="email" name="loginEmail" id="login" placeholder="Email" required="required")
+                label.visually-hidden(for="password") Введите пароль:
+                input.form__input(type="password" name="loginPassword" id="password" placeholder="Пароль" required="required")
+                .button-arrow
+                    input.button.button_form.button-arrow__button(type="submit" id="comeIn" value="Войти")
+                    label.button-arrow__label(for="comeIn")
+                .input-w.two-inputs-w
+                    p.text Нет аккаунта на Toxin?
+                    a(href="#signUp").button.button_light.button_light-create Создать
+    article(id="signUp").panel.panel_modal.panel_sign-up
+        fieldset
+            legend.panel__heading Регистрация аккаунта
+            form.form(method="post" action="https://echo.htmlacademy.ru")
+                label.visually-hidden(for="login") Введите имя:
+                input.form__input(type="text" name="firstName" id="login" placeholder="Имя" required="required")
+                label.visually-hidden(for="password") Введите фамилию:
+                input.form__input(type=text name="lastName" id="password" placeholder="Фамилия" required="required")
+                .form-radio
+                    input.form-radio__input(type="radio" name="gender" value="man" id="man" required="required")
+                    label.form-radio__label(for="man") Мужчина
+                .form-radio
+                    input.form-radio__input(type="radio" name="gender" value="woman" id="woman" required="required")
+                    label.form-radio__label(for="woman") Женщина
+                label.form__label(for="birthday") Дата рождения
+                input.form__input.form__input_date(type="date" name="birthday" id="birthday" placeholder="ДД.ММ.ГГГГ" required="required")
+                p.form__heading Данные для входа в сервис
+                label.visually-hidden.hidden__label(for="loginSignUp") Введите почту в качестве логина:
+                input.form__input(type="email" name="registrationEmail" id="loginSignUp" placeholder="Email" required="required")
+                label.visually-hidden.hidden__label(for="passwordSignUp") Введите пароль:
+                input.form__input(type="password" name="registrationPassword" id="passwordSignUp" placeholder="Пароль" required="required")
+                .form-check 
+                    input.form-check__input(type="checkbox" name="iWantALotOfSpam" id="getSpam")
+                    label.form-check__label(for="getSpam") Получать спецпредложения
+                .button-arrow
+                    input.button.button_form.button-arrow__button(type="submit" id="goPay" value="Перейти к оплате")
+                    label.button-arrow__label(for="goPay")
+                .input-w.two-inputs-w
+                    p.text Уже есть аккаунт на Toxin
+                    a(href="#signIn").button.button_light.button_light-login Войти

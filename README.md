@@ -16,7 +16,11 @@ https://sadcat88.github.io/FSD2step/prod/
 - Готов стиль для input с кнопкой внутри поля в виде стрелки
 - footer сделан - пока что статичен
 - main для landing Page сделан целиком
-  **↓ Last commit**
-- форма поиска для Landing Page стилизована целиком
-- пофикшены баги IE, Edge, Firefox
-- поправлен footer для совместимости с IE
+- Форма поиска для Landing Page стилизована целиком
+- Пофикшены баги IE, Edge, Firefox
+- Поправлен footer для совместимости с IE
+
+  <br>**↓ Last commit**
+- Модальные окна Готовы
+- Второй уровень меню в header готов
+- LandingPage стилизован целиком
