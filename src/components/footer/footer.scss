@@ -4,6 +4,9 @@
 
 .footer {
     padding-top: 104px;
+    position: relative;
+    z-index: 1;
+    background-color: $mainBgColor;
 
     .main-footer {
         border-bottom: 1px solid #d2d2d5;
@@ -37,10 +40,10 @@
                 justify-content: space-between;
 
                 .footer-menu__item {
-                    padding-bottom: 14px;
+                    padding-bottom: 10px;
 
                     .footer-menu__item-submenu {
-                        padding-top: 20px;
+                        padding-top: 15px;
                     }
                 }
 
@@ -52,11 +55,17 @@
                 }
 
                 .footer-menu__item-link {
-                    padding: 3px 0;
+                    display: inline-block;
+                    padding: 7px 0 3px 0;
+                    border-radius: 4px;
                     @extend .inter-font;
 
                     &:hover {
                         color: $mainColor;
+                    }
+
+                    &:focus {
+                        @extend .a11y;
                     }
                 }
             }

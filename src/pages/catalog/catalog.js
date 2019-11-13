@@ -1,10 +1,11 @@
 // подключение стилей
-import './catalog.scss';
-import 'normalize.css';
+import "./catalog.scss";
+import "normalize.css";
+import "../../assets/scss/base.scss";
+import "../../assets/scss/temporality.scss";
+import "../../components/buttons/button.scss";
+import "../../components/panel/panel.scss";
+import "../../components/header/header.scss";
+import "../../components/footer/footer.scss";
 
-// вызов функции для создания меню и передача ей значений для генерации меню для страницы index.js
-import createMenu from '../../components/menu/menu.js';
-var menu = createMenu(['Главная', 'Блог'], 'menu');
-document.body.appendChild(menu);
-
-console.log('test index.js');
+console.log("test catalog.js");

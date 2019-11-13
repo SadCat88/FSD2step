@@ -1,6 +1,126 @@
 extends ../../templates/base.jade
 block title
-    | Catalog page
-block main
-    h1 Catalog page
-    p hello Pug
+    | Catalog
+block body
+    include ../../components/header/header.jade
+
+    main.catalog
+        .wrapper.catalog-w
+            section.panel.panel_filters
+                form.form(method="post" action="https://echo.htmlacademy.ru")
+                    fieldset.form-dropdown-input.form-dropdown-dates.input-w.dates-w.kek
+                        legend.visually-hidden Даты пребывания в отеле
+                        input.form-dropdown-btn__input(type="checkbox" id="datesOfSta" aria-hidden="true")
+                        label.form-dropdown-btn__label(for="datesOfSta" aria-hidden="true") Даты пребывания в отеле
+                        .form-dropdown-list
+                            .two-inputs-w
+                            .input-w.input-small-w
+                                label.form__label.form__label_arrow(for="arrivalDate") Прибытие
+                                input.form__input.form__input_date(type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required")
+                            .input-w.input-small-w
+                                label.form__label.form__label_arrow(for="departureDate") Выезд
+                                input.form__input.form__input_date(type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required")
+                            .form-dropdown-two-btn
+                                input.dropdown-two-btn__button.dropdown-two-btn__button_gray(type="button" value="Очистить")
+                                input.dropdown-two-btn__button.dropdown-two-btn__button_color(type="button" value="Применить")
+                
+                    //- .input-w
+                    //-     label.form__label.form__label_expand(for="datesOfStay") Даты пребывания в отеле
+                    //-     input.form__input(type="text" name="datesOfStay" id="datesOfStay" placeholder="19 авг - 23 авг" required="required")
+                   
+                    fieldset.form-dropdown-input.form-dropdown-guests.form-dropdown-numerals.input-w.guests-w
+                        legend.visually-hidden Гости
+                        input.form-dropdown-btn__input(type="checkbox" id="qtyPeople" aria-hidden="true")
+                        label.form-dropdown-btn__label(for="qtyPeople" aria-hidden="true") Гости
+                        .form-dropdown-list
+                            .form-number
+                                label.form-number__label(for="qtyAdult") Взрослые
+                                input.form-number__input(type="number" value="1" min="0" max="10" step="1" name="qtyAdult" id="qtyAdult")
+                            .form-number
+                                label.form-number__label(for="qtyChildren") Дети
+                                input.form-number__input(type="number" value="0" min="0" max="10" step="1" name="qtyChildren" id="qtyChildren")
+                            .form-number
+                                label.form-number__label(for="qtyBaby") Младенцы
+                                input.form-number__input(type="number" value="0" min="0" max="10" step="1" name="qtyBaby" id="qtyBaby")
+                            .form-dropdown-two-btn
+                                input.dropdown-two-btn__button.dropdown-two-btn__button_gray(type="button" value="Очистить")
+                                input.dropdown-two-btn__button.dropdown-two-btn__button_color(type="button" value="Применить")
+                
+                    .input-w.double-range
+                        p.double-range__heading Диапазон цены
+                        p.double-range__value 5 000₽ - 10 000₽
+                        .double-range__input
+                        p.double-range__description Стоимость за сутки пребывания в номере
+
+                    fieldset.input-w
+                        legend.form__heading Дополнительные опции
+                        .form-check
+                            input.form-check__input(type="checkbox" name="allowed" id="smoking" value="smoking")
+                            label.form-check__label(for="smoking") Можно курить
+                        .form-check
+                            input.form-check__input(type="checkbox" name="allowed" id="pet" value="pet" checked)
+                            label.form-check__label(for="pet") Можно с питомцами
+                        .form-check
+                            input.form-check__input(type="checkbox" name="allowed" id="friends" value="tenFriends" checked)
+                            label.form-check__label(for="friends") Можно пригласить гостей (до 10 человек)
+
+                    fieldset.input-w
+                        legend.form__heading Доступность
+                        .form-check
+                            input.form-check__input(type="checkbox" name="accessibility" id="wideHall" value="wideHall")
+                            label.form-check__label.form-check__label-bold(for="wideHall") 
+                                | Широкий коридор
+                                | #[p.form-check__description Ширина коридоров в номере не менее 91 см.]
+                        .form-check
+                            input.form-check__input(type="checkbox" name="accessibility" id="assistantForInvalid" value="assistantForInvalid")
+                            label.form-check__label.form-check__label-bold(for="assistantForInvalid") 
+                                | Помощник для инвалидов
+                                | #[p.form-check__description На 1 этаже вас встретит специалист и проводит до номера.]
+
+                    fieldset.form-dropdown-input.form-dropdown-amenity.input-w.amenities-w
+                        legend.visually-hidden Удобства номера
+                        input.form-dropdown-btn__input(type="checkbox" id="roomAmenity" aria-hidden="true")
+                        label.form-dropdown-btn__label(for="roomAmenity" aria-hidden="true") Удобства номера
+                        .form-dropdown-list
+                            .form-number
+                                label.form-number__label(for="qtyBedroom") Спальни
+                                input.form-number__input(type="number" value="2" min="1" max="10" step="1" name="qtyBedroom" id="qtyBedroom")
+                            .form-number
+                                label.form-number__label(for="qtyBed") Кровати
+                                input.form-number__input(type="number" value="2" min="1" max="10" step="1" name="qtyBed" id="qtyBed")
+                            .form-number
+                                label.form-number__label(for="qtyBathroom") Ванные комнаты
+                                input.form-number__input(type="number" value="0" min="0" max="10" step="1" name="qtyBathroom" id="qtyBathroom")
+
+
+                    fieldset.form-dropdown_checklist.form-dropdown_checklist-w
+                        legend.visually-hidden Дополнительные удобства
+                        input.form-dropdown-btn__input(type="checkbox"  id="addAmenity" aria-hidden="true")
+                        label.form-dropdown-btn__label(for="addAmenity" aria-hidden="true") Дополнительные удобства
+                        .form-dropdown-list
+                            .form-check
+                                input.form-check__input(type="checkbox" name="addAmenity" id="breakfast" value="breakfast")
+                                label.form-check__label(for="breakfast") Завтрак
+                            .form-check
+                                input.form-check__input(type="checkbox" name="addAmenity" id="writingTable" value="writingTable")
+                                label.form-check__label(for="writingTable") Письменный стол
+                            .form-check
+                                input.form-check__input(type="checkbox" name="addAmenity" id="feedingChair" value="feedingChair")
+                                label.form-check__label(for="feedingChair") Стул для кормления
+                            .form-check
+                                input.form-check__input(type="checkbox" name="addAmenity" id="babyBed" value="babyBed")
+                                label.form-check__label(for="babyBed") Кроватка
+                            .form-check
+                                input.form-check__input(type="checkbox" name="addAmenity" id="TV" value="TV")
+                                label.form-check__label(for="TV") Телевизор
+                            .form-check
+                                input.form-check__input(type="checkbox" name="addAmenity" id="shampoo" value="shampoo")
+                                label.form-check__label(for="shampoo") Шампунь
+                    input.button.button_form.button_kek(type="submit" value="Тест формы")
+                    style.
+                        .button_kek {
+                            position: absolute;
+                            left: 400px;
+                        }
+            section.catalog-items
+    include ../../components/footer/footer.jade

@@ -3,6 +3,7 @@
 .promo {
     padding-top: 70px;
     min-height: 830px;
+    background-color: $mainBgColor;
 
     &.promo_bg-image {
         background: url('./promo-image-1.jpg') center (bottom/cover) no-repeat;

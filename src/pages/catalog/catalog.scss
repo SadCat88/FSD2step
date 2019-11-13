@@ -1,7 +1,25 @@
-h1 {
-    color: green;
-}
+@import '../../assets/scss/utils/vars.scss';
 
-p {
-    color: blue;
+.catalog {
+    background-color: $mainBgColor;
+    padding: 20px 0 0 0;
+
+    .catalog-w {
+        display: flex;
+        flex-direction: row;
+
+        .panel_filters {
+            width: 266px;
+            // == 
+            margin: 0 60px 0 0;
+            padding: 0;
+            box-shadow: none;
+        }
+
+        .catalog-items {
+            min-height: 900px;
+            // ==
+            flex-grow: 1;
+        }
+    }
 }

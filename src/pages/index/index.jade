@@ -13,18 +13,19 @@ block body
                     form.form(method="post" action="https://echo.htmlacademy.ru")
                         .two-inputs-w
                             .input-w.input-small-w
-                                label.form__label.form__label_date(for="arrivalDate") Прибытие
+                                label.form__label.form__label_arrow(for="arrivalDate") Прибытие
                                 input.form__input.form__input_date(type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required")
                             .input-w.input-small-w
-                                label.form__label.form__label_date(for="departureDate") Выезд
+                                label.form__label.form__label_arrow(for="departureDate") Выезд
                                 input.form__input.form__input_date(type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required")
                         .input-w.input-large-w
-                            label.form__label.form__label_date(for="numOfResidents") Гости
+                            label.form__label(for="numOfResidents") Гости
                             input.form__input(type="email" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required")
                         .button-arrow
                             input.button.button_form.button-arrow__button(type="submit" id="roomBtn" value="Подобрать номер")
                             label.button-arrow__label(for="roomBtn")
     include ../../components/footer/footer.jade
+
     article(id="signIn").panel.panel_modal.panel_come-in
         fieldset
             legend.panel__heading Войти
@@ -39,6 +40,7 @@ block body
                 .input-w.two-inputs-w
                     p.text Нет аккаунта на Toxin?
                     a(href="#signUp").button.button_light.button_light-create Создать
+
     article(id="signUp").panel.panel_modal.panel_sign-up
         fieldset
             legend.panel__heading Регистрация аккаунта
@@ -60,9 +62,9 @@ block body
                 input.form__input(type="email" name="registrationEmail" id="loginSignUp" placeholder="Email" required="required")
                 label.visually-hidden.hidden__label(for="passwordSignUp") Введите пароль:
                 input.form__input(type="password" name="registrationPassword" id="passwordSignUp" placeholder="Пароль" required="required")
-                .form-check 
-                    input.form-check__input(type="checkbox" name="iWantALotOfSpam" id="getSpam")
-                    label.form-check__label(for="getSpam") Получать спецпредложения
+                .form-switch
+                    input.form-switch__input(type="checkbox" name="iWantALotOfSpam" id="getSpam")
+                    label.form-switch__label(for="getSpam") Получать спецпредложения
                 .button-arrow
                     input.button.button_form.button-arrow__button(type="submit" id="goPay" value="Перейти к оплате")
                     label.button-arrow__label(for="goPay")

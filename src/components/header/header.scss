@@ -80,9 +80,8 @@
 
                 &.main-menu__submenu {
                     @supports (-ms-ime-align: auto) {
-                        /* Edge */
+                        /* Edge fix */
                         padding-right: 30px;
-
                     }
 
                     &::after {
@@ -101,7 +100,10 @@
             }
         }
 
-        .main-menu__item:hover .header-submenu {z-index: 0;}
+        .main-menu__item:hover .header-submenu {
+            z-index: 0;
+        }
+
         .main-menu__item:focus-within .header-submenu {
             z-index: 0;
         }
@@ -109,11 +111,13 @@
         .header-submenu {
             position: absolute;
             z-index: -100;
-            background-color: $mainBgColor;
-
             border-radius: 4px;
-            margin: -5px 0 0 20px;
+            margin: -5px 0 0 10px;
             padding: 10px 5px;
+            border-top: 15px solid $mainBgColor;
+            background-color: mix($mainBgColor, $mainColor, 90%);
+            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
 
             .header-submenu__item {
                 .main-menu__item-link {
@@ -123,15 +127,6 @@
                 }
             }
         }
-
-        // _:-ms-lang(x),
-        // .main-menu__item:hover .header-submenu {
-        //     z-index: 0;
-        // }
-        // _:-ms-lang(x),
-        // .header-submenu__item:focus .header-submenu {
-        //     z-index: 0;
-        // }
 
         .user-menu__input {
             z-index: 2;
