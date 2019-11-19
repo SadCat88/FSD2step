@@ -33,7 +33,9 @@ const provide = require("./webpack/common/provide.js");
 const prodExtractCSS = require("./webpack/prod/prod.css.extract.js");
 const chunks = require("./webpack/common/chunks.js");
 const imgCopy = require("./webpack/common/imgcopy.js");
-const wdsImgCopy = require("./webpack/dev/wds.imgcopy");
+const wdsImgCopy = require("./webpack/dev/wds.imgcopy.js");
+const fontCopy = require("./webpack/common/fontcopy.js");
+const wdsFontCopy = require("./webpack/dev/wds.fontcopy.js");
 const filesCopy = require("./webpack/common/filescopy.js");
 // ===========================================================
 
@@ -125,14 +127,6 @@ const baseWebpackConfig = merge([
               scss: "vue-style-loader!css-loader!sass-loader"
             }
           }
-        },
-        {
-          // для подключения шрифтов
-          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/i,
-          loader: "file-loader",
-          options: {
-            name: "[name].[ext]"
-          }
         }
         // {
         //   // для обработки html  в связке с file-loader для svg
@@ -201,6 +195,7 @@ const devBuildWebpackConfig = merge([
   devExtractCSS(),
   chunks(),
   imgCopy(),
+  fontCopy()
 ]);
 
 // ↓ Production часть конфига==============================================
@@ -240,6 +235,7 @@ module.exports = function(env) {
       prodExtractCSS(),
       chunks(),
       imgCopy(),
+      fontCopy()
     ]);
   }
   // ↓ Development + Server часть конфига====================================
@@ -261,6 +257,7 @@ module.exports = function(env) {
       devcss(),
       chunks(),
       wdsImgCopy(),
+      wdsFontCopy()
     ]);
   }
   // ↓ Devbuild часть конфига================================================

@@ -1,0 +1,59 @@
+@import '../../../assets/scss/utils/vars.scss';
+
+.form-radio {
+    position: relative;
+
+    border-radius: 4px;
+
+    &:focus-within {
+        @extend .a11y;
+    }
+
+    // label - text and new border
+    .form-radio__label {
+        display: inline-block;
+        padding-left: 30px;
+
+        line-height: 20px;
+        white-space: nowrap;
+        user-select: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        // new border
+        &::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+
+            width: 20px;
+            height: 20px;
+            border: 1px solid $mainColor;
+            border-radius: 50%;
+        }
+
+        // new check
+        &::after {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+
+            width: 12px;
+            height: 12px;
+
+            background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+            border-radius: 50%;
+        }
+    }
+
+    // new input
+    .form-radio__input {
+        &:checked+.form-radio__label::after {
+            // checked style bullet
+            content: "";
+        }
+    }
+}

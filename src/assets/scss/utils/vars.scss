@@ -43,8 +43,8 @@ $smPhoneWidth : 320px;
 .main-font {
     font-family: 'Montserrat',
         sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     text-transform: none;
@@ -54,10 +54,10 @@ $smPhoneWidth : 320px;
 // 
 // Main page heading
 .main-page-heading {
-    font-family: 'Quicksand',
+    font-family: 'Open Sans',
         sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     text-transform: none;
@@ -69,8 +69,8 @@ $smPhoneWidth : 320px;
 .main-bold-font {
     font-family: 'Montserrat',
         sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -82,8 +82,8 @@ $smPhoneWidth : 320px;
 .inter-font {
     font-family: 'Montserrat',
         sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 18px;
     text-transform: none;
@@ -95,8 +95,8 @@ $smPhoneWidth : 320px;
 .inter-bold-font {
     font-family: 'Montserrat',
         sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     text-transform: none;
@@ -109,7 +109,7 @@ $smPhoneWidth : 320px;
     font-family: 'Montserrat',
         sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     text-transform: none;
@@ -121,6 +121,8 @@ $smPhoneWidth : 320px;
 .icons-font {
     font-family: "Material Icons";
     line-height: 0;
+    font-weight: 400;
+    font-style: normal;
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;
@@ -145,7 +147,6 @@ $smPhoneWidth : 320px;
     font-family: 'Font Awesome 5 Brands';
     font-weight: 900;
 }
-
 // 
 // ↑ Fonts ==================================
 // ↑↑ Extends ==================================================================

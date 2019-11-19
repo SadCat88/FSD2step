@@ -10,19 +10,27 @@
     }
 
 
-    & .wrapper {
+    .wrapper {
         display: flex;
         flex-direction: column-reverse;
     }
 
-
+    .button-arrow-w {
+        margin-top: 22px;
+    }
 
     .promo-heading {
         align-self: flex-end;
         bottom: 0;
         right: 0;
-        max-width: 247;
+        max-width: 297;
         text-align: right;
+        // @extend .main-font;
+
+    }
+
+    .promo-panel-w {
+        margin-bottom: 319;
     }
 
 }

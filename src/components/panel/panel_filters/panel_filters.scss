@@ -1,0 +1,54 @@
+.panel_filters {
+    padding: 12px 0 0 0;
+
+    .dropdown-bottom-btn-w {
+        margin: 35px -10px 19px 0;
+    }
+
+    .dates-w {
+        margin-bottom: 65px;
+    }
+
+    .guests-w {
+        margin-bottom: 73px;
+    }
+
+    .double-range-w {
+        margin-bottom: 28px;
+
+        .double-range__input-w {
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .add-options-w {
+        max-width: 222px;
+        margin-bottom: 19px;
+
+        .form__heading {
+            margin-bottom: 17px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+    }
+
+    .accessibility-w {
+        max-width: 260px;
+        margin-bottom: 20px;
+
+        .form__heading {
+            margin-bottom: 14px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+    }
+
+    .amenity-w {
+        margin-bottom: 75px;
+    }
+}

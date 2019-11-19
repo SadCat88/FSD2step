@@ -1,0 +1,135 @@
+@import '../../../assets/scss/utils/vars.scss';
+
+.form-dropdown {
+    position: relative;
+
+    .form-dropdown-btn__label {
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        // expand for label - list OFF
+        &::after {
+            content: "expand_more";
+
+            position: absolute;
+            right: 10px;
+            top: 0px;
+
+            @extend .icons-font;
+            font-size: 24px;
+            line-height: 15px;
+            text-align: center;
+            color: $dark50;
+        }
+    }
+
+    .form-dropdown-list {
+        position: absolute;
+        top: 61px;
+        z-index: -10;
+
+        width: 100%;
+        padding: 5px 17px 0 15px;
+        border: 1px solid $dark25;
+        border-radius: 0 0 4px 4px;
+
+        background-color: $mainBgColor;
+    }
+
+    .form-dropdown-btn__input {
+        &:checked+.form-dropdown-btn__label {
+            &::after {
+                content: "expand_less";
+            }
+
+            &::before {
+                border-radius: 4px 4px 0 0;
+            }
+        }
+
+        &:checked~.form-dropdown-list {
+            z-index: 2;
+        }
+    }
+
+    .dropdown-bottom-btn {
+        border: none;
+        border-radius: 4px;
+        margin: 0;
+        padding: 0;
+
+        background-color: $mainBgColor;
+        @extend .main-bold-font;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            @extend .a11y;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+
+        &.dropdown-bottom-btn_gray {
+            color: $dark50;
+        }
+
+        &.dropdown-bottom-btn_color {
+            color: $mainColor;
+        }
+    }
+
+}
+
+.form-dropdown_input {
+    .form-dropdown-btn__label {
+
+        // expand symbol
+        &::after {
+
+            top: 34px;
+            right: 10px;
+        }
+
+        // imitation input form
+        &::before {
+            content: "Some text...";
+            // imitation placeholder
+
+            position: absolute;
+            top: 18px;
+
+            display: block;
+            width: 100%;
+            height: 44px;
+            padding: 0 15px 0 15px;
+            border: 1px solid $dark25;
+            border-radius: 4px;
+
+            @extend .main-font;
+            line-height: 44px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.form-dropdown_checklist {
+    .form-dropdown-list {
+        border: none;
+        padding: 0;
+        top: 32;
+    }
+
+    .form-check {
+        margin-bottom: 10px;
+    }
+}

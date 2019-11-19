@@ -13,27 +13,28 @@
     }
 
     .main-footer-w {
-        margin-bottom: 83px;
+        margin-bottom: 75px;
         display: flex;
         justify-content: space-between;
 
         .logo-w {
             display: flex;
             flex-direction: column;
-            margin-top: -5px;
+            margin: -5px 0 0 0;
 
-            .footer-message {
-                width: 250px;
-            }
 
             .logotype {
-                margin-bottom: 20px;
+                margin: 0 0 19px 0;
+            }
+
+            .footer-message {
+                width: 260px;
             }
         }
 
         .footer-navigation {
             flex-grow: 1;
-            margin: 0 70px 0 50px;
+            margin: 0 0 0 40px;
 
             .footer-menu {
                 display: flex;
@@ -41,6 +42,7 @@
 
                 .footer-menu__item {
                     padding-bottom: 10px;
+                    width: 200px;
 
                     .footer-menu__item-submenu {
                         padding-top: 15px;
@@ -96,7 +98,7 @@
 
                 .inner-btn__input {
                     width: 100%;
-                    padding: 0 59px 0 15px;
+                    padding: 0 0 0 15px;
 
                     &::placeholder {
                         color: $dark25;
@@ -187,7 +189,7 @@
     .second-footer-w {
         display: flex;
         justify-content: space-between;
-        margin-top: 10px;
+        padding-top: 25px;
 
         @media screen and (-ms-high-contrast: active),
         (-ms-high-contrast: none) {

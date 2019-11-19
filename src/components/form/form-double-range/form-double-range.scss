@@ -1,0 +1,15 @@
+@import '../../../assets/scss/utils/vars.scss';
+
+.form-double-range {
+
+    .double-range__value {
+        @extend .inter-light-font;
+        white-space: nowrap;
+        user-select: none;
+        text-transform: uppercase;
+    }
+
+    .double-range__description {
+        @extend .inter-light-font;
+    }
+}

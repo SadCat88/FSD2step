@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
     <title>Catalog
     </title>
-  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.f897073cc7dde9b8e0de.css" rel="stylesheet"><link href="./assets/pages/catalog/catalog.f897073cc7dde9b8e0de.css" rel="stylesheet"></head>
+  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.f0cd8662abfbf51279a6.css" rel="stylesheet"><link href="./assets/pages/catalog/catalog.f0cd8662abfbf51279a6.css" rel="stylesheet"></head>
   <body>
 <header class="header">
   <div class="wrapper wrapper-header">
@@ -46,135 +46,147 @@
       <div class="wrapper catalog-w">
         <section class="panel panel_filters">
           <form class="form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="form-dropdown-input form-dropdown-dates input-w dates-w kek">
+            <fieldset class="form-dropdown form-dropdown_input form-dropdown_dates dates-w">
               <legend class="visually-hidden">Даты пребывания в отеле</legend>
-              <input class="form-dropdown-btn__input" type="checkbox" id="datesOfSta" aria-hidden="true"/>
-              <label class="form-dropdown-btn__label" for="datesOfSta" aria-hidden="true">Даты пребывания в отеле</label>
+              <input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="datesOfSta" aria-hidden="true"/>
+              <label class="form-dropdown-btn__label form__label" for="datesOfSta" aria-hidden="true">Даты пребывания в отеле</label>
               <div class="form-dropdown-list">
-                <div class="two-inputs-w"></div>
                 <div class="input-w input-small-w">
-                  <label class="form__label form__label_arrow" for="arrivalDate">Прибытие</label>
+                  <label class="form__label" for="arrivalDate">Прибытие</label>
                   <input class="form__input form__input_date" type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required"/>
                 </div>
                 <div class="input-w input-small-w">
-                  <label class="form__label form__label_arrow" for="departureDate">Выезд</label>
+                  <label class="form__label" for="departureDate">Выезд</label>
                   <input class="form__input form__input_date" type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required"/>
                 </div>
-                <div class="form-dropdown-two-btn">
-                  <input class="dropdown-two-btn__button dropdown-two-btn__button_gray" type="button" value="Очистить"/>
-                  <input class="dropdown-two-btn__button dropdown-two-btn__button_color" type="button" value="Применить"/>
+                <div class="two-inputs-row-w dropdown-bottom-btn-w">
+                  <input class="dropdown-bottom-btn dropdown-bottom-btn_gray" type="button" value="Очистить"/>
+                  <input class="dropdown-bottom-btn dropdown-bottom-btn_color" type="button" value="Применить"/>
                 </div>
               </div>
             </fieldset>
-            <fieldset class="form-dropdown-input form-dropdown-guests form-dropdown-numerals input-w guests-w">
+            <fieldset class="form-dropdown form-dropdown_input form-dropdown_guests guests-w">
               <legend class="visually-hidden">Гости</legend>
-              <input class="form-dropdown-btn__input" type="checkbox" id="qtyPeople" aria-hidden="true"/>
-              <label class="form-dropdown-btn__label" for="qtyPeople" aria-hidden="true">Гости</label>
+              <input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="qtyPeople" aria-hidden="true"/>
+              <label class="form-dropdown-btn__label form__label" for="qtyPeople" aria-hidden="true">Гости</label>
               <div class="form-dropdown-list">
                 <div class="form-number">
-                  <label class="form-number__label" for="qtyAdult">Взрослые</label>
+                  <label class="form__label form-number__label" for="qtyAdult">Взрослые</label>
                   <input class="form-number__input" type="number" value="1" min="0" max="10" step="1" name="qtyAdult" id="qtyAdult"/>
                 </div>
                 <div class="form-number">
-                  <label class="form-number__label" for="qtyChildren">Дети</label>
+                  <label class="form__label form-number__label" for="qtyChildren">Дети</label>
                   <input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyChildren" id="qtyChildren"/>
                 </div>
                 <div class="form-number">
-                  <label class="form-number__label" for="qtyBaby">Младенцы</label>
+                  <label class="form__label form-number__label" for="qtyBaby">Младенцы</label>
                   <input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyBaby" id="qtyBaby"/>
                 </div>
-                <div class="form-dropdown-two-btn">
-                  <input class="dropdown-two-btn__button dropdown-two-btn__button_gray" type="button" value="Очистить"/>
-                  <input class="dropdown-two-btn__button dropdown-two-btn__button_color" type="button" value="Применить"/>
+                <div class="two-inputs-row-w dropdown-bottom-btn-w">
+                  <input class="dropdown-bottom-btn dropdown-bottom-btn_gray" type="button" value="Очистить"/>
+                  <input class="dropdown-bottom-btn dropdown-bottom-btn_color" type="button" value="Применить"/>
                 </div>
               </div>
             </fieldset>
-            <div class="input-w double-range">
-              <p class="double-range__heading">Диапазон цены</p>
-              <p class="double-range__value">5 000₽ - 10 000₽</p>
-              <div class="double-range__input"></div>
+            <fieldset class="form-double-range double-range-w">
+              <div class="two-inputs-row-w">
+                <legend class="form__heading double-range__heading">Диапазон цены</legend>
+                <p class="double-range__value"><span class="min-price">5 000</span>₽
+                  -
+                   
+                  <span class="max-price">10 000</span>₽
+                </p>
+              </div>
+              <div class="double-range__input two-inputs-row-w double-range__input-w">
+                <div class="form-range form-range_min">
+                  <label class="visually-hidden" for="minRange">Минимальная цена за номер</label>
+                  <input class="form-range__input form-range__input_min" type="range" value="5000" min="0" max="30000" step="1000" id="minRange"/>
+                </div>
+                <div class="form-range form-range_max">
+                  <label class="visually-hidden" for="maxRange">Максимальная цена за номер</label>
+                  <input class="form-range__input form-range__input_max" type="range" value="10000" min="0" max="30000" step="1000" id="maxRange"/>
+                </div>
+              </div>
               <p class="double-range__description">Стоимость за сутки пребывания в номере</p>
-            </div>
-            <fieldset class="input-w">
+            </fieldset>
+            <fieldset class="add-options-w">
               <legend class="form__heading">Дополнительные опции</legend>
               <div class="form-check">
-                <input class="form-check__input" type="checkbox" name="allowed" id="smoking" value="smoking"/>
+                <input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="smoking" value="smoking"/>
                 <label class="form-check__label" for="smoking">Можно курить</label>
               </div>
               <div class="form-check">
-                <input class="form-check__input" type="checkbox" name="allowed" id="pet" value="pet" checked="checked"/>
+                <input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="pet" value="pet" checked="checked"/>
                 <label class="form-check__label" for="pet">Можно с питомцами</label>
               </div>
               <div class="form-check">
-                <input class="form-check__input" type="checkbox" name="allowed" id="friends" value="tenFriends" checked="checked"/>
-                <label class="form-check__label" for="friends">Можно пригласить гостей (до 10 человек)</label>
+                <input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="friends" value="tenFriends" checked="checked"/>
+                <label class="form-check__label" for="friends"><span class="line-wrap-on">Можно пригласить гостей (до 10 человек)</span></label>
               </div>
             </fieldset>
-            <fieldset class="input-w">
+            <fieldset class="accessibility-w">
               <legend class="form__heading">Доступность</legend>
               <div class="form-check">
-                <input class="form-check__input" type="checkbox" name="accessibility" id="wideHall" value="wideHall"/>
+                <input class="form-check__input form-input_hide" type="checkbox" name="accessibility" id="wideHall" value="wideHall"/>
                 <label class="form-check__label form-check__label-bold" for="wideHall">
                    Широкий коридор
-                  
-                  <p class="form-check__description">Ширина коридоров в номере не менее 91 см.</p>
+                  <span class="form-check__description">Ширина коридоров в номере не менее 91 см.</span>
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check__input" type="checkbox" name="accessibility" id="assistantForInvalid" value="assistantForInvalid"/>
+                <input class="form-check__input form-input_hide" type="checkbox" name="accessibility" id="assistantForInvalid" value="assistantForInvalid"/>
                 <label class="form-check__label form-check__label-bold" for="assistantForInvalid">
                    Помощник для инвалидов
-                  
-                  <p class="form-check__description">На 1 этаже вас встретит специалист и проводит до номера.</p>
+                  <span class="form-check__description">На 1 этаже вас встретит специалист и проводит до номера.</span>
                 </label>
               </div>
             </fieldset>
-            <fieldset class="form-dropdown-input form-dropdown-amenity input-w amenities-w">
+            <fieldset class="form-dropdown form-dropdown_input form-dropdown_amenity amenity-w">
               <legend class="visually-hidden">Удобства номера</legend>
-              <input class="form-dropdown-btn__input" type="checkbox" id="roomAmenity" aria-hidden="true"/>
-              <label class="form-dropdown-btn__label" for="roomAmenity" aria-hidden="true">Удобства номера</label>
+              <input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="roomAmenity" aria-hidden="true"/>
+              <label class="form-dropdown-btn__label form__label" for="roomAmenity" aria-hidden="true">Удобства номера</label>
               <div class="form-dropdown-list">
                 <div class="form-number">
-                  <label class="form-number__label" for="qtyBedroom">Спальни</label>
+                  <label class="form__label form-number__label" for="qtyBedroom">Спальни</label>
                   <input class="form-number__input" type="number" value="2" min="1" max="10" step="1" name="qtyBedroom" id="qtyBedroom"/>
                 </div>
                 <div class="form-number">
-                  <label class="form-number__label" for="qtyBed">Кровати</label>
+                  <label class="form__label form-number__label" for="qtyBed">Кровати</label>
                   <input class="form-number__input" type="number" value="2" min="1" max="10" step="1" name="qtyBed" id="qtyBed"/>
                 </div>
                 <div class="form-number">
-                  <label class="form-number__label" for="qtyBathroom">Ванные комнаты</label>
+                  <label class="form__label form-number__label" for="qtyBathroom">Ванные комнаты</label>
                   <input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyBathroom" id="qtyBathroom"/>
                 </div>
               </div>
             </fieldset>
-            <fieldset class="form-dropdown_checklist form-dropdown_checklist-w">
+            <fieldset class="form-dropdown form-dropdown_checklist form-dropdown_checklist-w">
               <legend class="visually-hidden">Дополнительные удобства</legend>
-              <input class="form-dropdown-btn__input" type="checkbox" id="addAmenity" aria-hidden="true"/>
-              <label class="form-dropdown-btn__label" for="addAmenity" aria-hidden="true">Дополнительные удобства</label>
+              <input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="addAmenity" aria-hidden="true"/>
+              <label class="form-dropdown-btn__label form__label" for="addAmenity" aria-hidden="true">Дополнительные удобства</label>
               <div class="form-dropdown-list">
                 <div class="form-check">
-                  <input class="form-check__input" type="checkbox" name="addAmenity" id="breakfast" value="breakfast"/>
+                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="breakfast" value="breakfast"/>
                   <label class="form-check__label" for="breakfast">Завтрак</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check__input" type="checkbox" name="addAmenity" id="writingTable" value="writingTable"/>
+                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="writingTable" value="writingTable"/>
                   <label class="form-check__label" for="writingTable">Письменный стол</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check__input" type="checkbox" name="addAmenity" id="feedingChair" value="feedingChair"/>
+                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="feedingChair" value="feedingChair"/>
                   <label class="form-check__label" for="feedingChair">Стул для кормления</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check__input" type="checkbox" name="addAmenity" id="babyBed" value="babyBed"/>
+                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="babyBed" value="babyBed"/>
                   <label class="form-check__label" for="babyBed">Кроватка</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check__input" type="checkbox" name="addAmenity" id="TV" value="TV"/>
+                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="TV" value="TV"/>
                   <label class="form-check__label" for="TV">Телевизор</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check__input" type="checkbox" name="addAmenity" id="shampoo" value="shampoo"/>
+                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="shampoo" value="shampoo"/>
                   <label class="form-check__label" for="shampoo">Шампунь</label>
                 </div>
               </div>
@@ -227,7 +239,9 @@
             <ul class="footer-menu__item-submenu">
               <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Соглашения</a></li>
               <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Сообщество</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Связь с нами                 </a></li>
+              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">
+                  Связь с нами                 
+                  </a></li>
             </ul>
           </li>
         </ul>
@@ -259,5 +273,5 @@
     </div>
   </section>
 </footer>
-  <script type="text/javascript" src="./assets/pages/vendors/vendors.f897073cc7dde9b8e0de.js"></script><script type="text/javascript" src="./assets/pages/catalog/catalog.f897073cc7dde9b8e0de.js"></script></body>
+  <script type="text/javascript" src="./assets/pages/vendors/vendors.f0cd8662abfbf51279a6.js"></script><script type="text/javascript" src="./assets/pages/catalog/catalog.f0cd8662abfbf51279a6.js"></script></body>
 </html>

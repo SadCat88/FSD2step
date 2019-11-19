@@ -1,0 +1,58 @@
+@import '../../../assets/scss/utils/vars.scss';
+
+.form-number {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 30px;
+    margin-bottom: 7px;
+
+    .form-number__label {
+        line-height: 30px;
+
+        &::after,
+        &::before {
+            position: absolute;
+            // top: 0;
+            // transform: translate(-50%, -50%);
+
+            // display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-top: 1px;
+            border: 1px solid $dark25;
+            border-radius: 50%;
+
+            @extend .inter-light-font;
+            font-size: 18px;
+            text-align: center;
+
+            background-color: $mainBgColor;
+        }
+
+        &::after {
+            content: "+";
+
+            right: -11;
+
+            line-height: 30px;
+        }
+
+        &::before {
+            content: "-";
+
+            right: 51px;
+            line-height: 28px;
+        }
+    }
+
+    .form-number__input {
+        width: 59px;
+        border: none;
+
+        @extend .main-bold-font;
+        text-align: center;
+    }
+}

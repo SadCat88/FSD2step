@@ -58,7 +58,7 @@
         }
 
         .main-menu__item {
-            padding-right: 10px;
+            padding-left: 11px;
 
             .main-menu__item-link {
                 padding: 3px 5px;
@@ -128,12 +128,17 @@
             }
         }
 
-        .user-menu__input {
+        .user-menu {
             z-index: 2;
-        }
 
-        .user-menu__registration {
-            padding-left: 20px;
+
+            .user-menu__input {
+                padding-left: 15px;
+            }
+
+            .user-menu__registration {
+                padding-left: 20px;
+            }
         }
     }
 }

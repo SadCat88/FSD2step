@@ -1,0 +1,8 @@
+.form-input_hide {
+    // hide original form
+    position: absolute;
+    left: -10000px;
+
+    width: 0;
+    height: 0;
+}

@@ -1,42 +1,48 @@
+// пути к шрифтам относительно файла base.scss
+
 @font-face {
     font-family: 'Montserrat';
+    src: url('../../assets/fonts/montserrat-400-normal.eot');
     src: local('Montserrat'), local('Montserrat-Regular'),
-        url('/assets/fonts/montserrat.woff2') format('woff2'),
-        url('/assets/fonts/montserrat.woff') format('woff'),
-        url('/assets/fonts/montserrat.ttf') format('truetype');
+        url('../../assets/fonts/montserrat-400-normal.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/montserrat-400-normal.woff2') format('woff2'),
+        url('../../assets/fonts/montserrat-400-normal.woff') format('woff'),
+        url('../../assets/fonts/montserrat-400-normal.ttf') format('truetype'),
+        url('../../assets/fonts/montserrat-400-normal.svg#montserratregular') format('svg');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
+    src: url('../../assets/fonts/montserrat-700-normal.eot');
     src: local('Montserrat Bold'), local('Montserrat-Bold'),
-        url('/assets/fonts/montserratbold.woff2') format('woff2'),
-        url('/assets/fonts/montserratbold.woff') format('woff'),
-        url('/assets/fonts/montserratbold.ttf') format('truetype');
+        url('../../assets/fonts/montserrat-700-normal.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/montserrat-700-normal.woff2') format('woff2'),
+        url('../../assets/fonts/montserrat-700-normal.woff') format('woff'),
+        url('../../assets/fonts/montserrat-700-normal.ttf') format('truetype'),
+        url('../../assets/fonts/montserrat-700-normal.svg#montserratbold') format('svg');
     font-weight: 700;
     font-style: bold;
 }
 
 @font-face {
-    font-family: 'Quicksand';
-    src: local('Quicksand Bold'), local('Quicksand-Bold'),
-        url('/assets/fonts/quicksandbold.woff2') format('woff2'),
-        url('/assets/fonts/quicksandbold.woff') format('woff'),
-        url('/assets/fonts/quicksandbold.ttf') format('truetype');
+    font-family: 'Open Sans';
+    src: url('../../assets/fonts/opensans-700-normal.eot');
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('../../assets/fonts/opensans-700-normal.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/opensans-700-normal.woff2') format('woff2'),
+        url('../../assets/fonts/opensans-700-normal.woff') format('woff'),
+        url('../../assets/fonts/opensans-700-normal.ttf') format('truetype'),
+        url('../../assets/fonts/opensans-700-normal.svg#open_sansbold') format('svg');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Material Icons';
-    src: url(https://example.com/MaterialIcons-Regular.eot);
-    /* For IE6-8 */
     src: local('Material Icons'),
-        local('MaterialIcons-Regular'),
-        url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-        url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-        url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-    font-style: normal;
+        local('MaterialIcons-Regular');
     font-weight: 400;
+    font-style: normal;
 }

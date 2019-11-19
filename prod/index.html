@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
     <title>Home
     </title>
-  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.f897073cc7dde9b8e0de.css" rel="stylesheet"><link href="./assets/pages/index/index.f897073cc7dde9b8e0de.css" rel="stylesheet"></head>
+  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.f0cd8662abfbf51279a6.css" rel="stylesheet"><link href="./assets/pages/index/index.f0cd8662abfbf51279a6.css" rel="stylesheet"></head>
   <body>
 <header class="header">
   <div class="wrapper wrapper-header">
@@ -46,25 +46,25 @@
       <div class="wrapper">
         <h1 class="visually-hidden">Сервис бронирования номеров в отелях</h1>
         <p class="promo-heading">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
-        <article class="panel">
+        <article class="panel promo-panel-w">
           <fieldset>
             <legend class="panel__heading">Найдём номера под ваши пожелания</legend>
             <form class="form" method="post" action="https://echo.htmlacademy.ru">
-              <div class="two-inputs-w">
-                <div class="input-w input-small-w">
-                  <label class="form__label form__label_arrow" for="arrivalDate">Прибытие</label>
+              <div class="two-inputs-row-w">
+                <div class="input_and-label-column-w input-small-w">
+                  <label class="form__label form__label_expand" for="arrivalDate">Прибытие</label>
                   <input class="form__input form__input_date" type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required"/>
                 </div>
-                <div class="input-w input-small-w">
-                  <label class="form__label form__label_arrow" for="departureDate">Выезд</label>
+                <div class="input_and-label-column-w input-small-w">
+                  <label class="form__label form__label_expand" for="departureDate">Выезд</label>
                   <input class="form__input form__input_date" type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required"/>
                 </div>
               </div>
-              <div class="input-w input-large-w">
-                <label class="form__label" for="numOfResidents">Гости</label>
+              <div class="input_and-label-column-w">
+                <label class="form__label form__label_expand" for="numOfResidents">Гости</label>
                 <input class="form__input" type="email" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required"/>
               </div>
-              <div class="button-arrow">
+              <div class="button-arrow button-arrow-w">
                 <input class="button button_form button-arrow__button" type="submit" id="roomBtn" value="Подобрать номер"/>
                 <label class="button-arrow__label" for="roomBtn"></label>
               </div>
@@ -109,7 +109,9 @@
             <ul class="footer-menu__item-submenu">
               <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Соглашения</a></li>
               <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Сообщество</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Связь с нами                 </a></li>
+              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">
+                  Связь с нами                 
+                  </a></li>
             </ul>
           </li>
         </ul>
@@ -141,7 +143,7 @@
     </div>
   </section>
 </footer>
-    <article class="panel panel_modal panel_come-in" id="signIn">
+    <article class="panel panel_modal panel_login" id="signIn">
       <fieldset>
         <legend class="panel__heading">Войти</legend>
         <form class="form" method="post" action="https://echo.htmlacademy.ru">
@@ -153,13 +155,13 @@
             <input class="button button_form button-arrow__button" type="submit" id="comeIn" value="Войти"/>
             <label class="button-arrow__label" for="comeIn"></label>
           </div>
-          <div class="input-w two-inputs-w">
+          <div class="two-inputs-row-w"> 
             <p class="text">Нет аккаунта на Toxin?</p><a class="button button_light button_light-create" href="#signUp">Создать</a>
           </div>
         </form>
       </fieldset>
     </article>
-    <article class="panel panel_modal panel_sign-up" id="signUp">
+    <article class="panel panel_modal panel_registration" id="signUp">
       <fieldset>
         <legend class="panel__heading">Регистрация аккаунта</legend>
         <form class="form" method="post" action="https://echo.htmlacademy.ru">
@@ -167,13 +169,15 @@
           <input class="form__input" type="text" name="firstName" id="login" placeholder="Имя" required="required"/>
           <label class="visually-hidden" for="password">Введите фамилию:</label>
           <input class="form__input" name="lastName" id="password" placeholder="Фамилия" required="required"/>
-          <div class="form-radio">
-            <input class="form-radio__input" type="radio" name="gender" value="man" id="man" required="required"/>
-            <label class="form-radio__label" for="man">Мужчина</label>
-          </div>
-          <div class="form-radio">
-            <input class="form-radio__input" type="radio" name="gender" value="woman" id="woman" required="required"/>
-            <label class="form-radio__label" for="woman">Женщина</label>
+          <div class="two-inputs-row-w two-inputs-align-left-row-w">
+            <div class="form-radio">
+              <input class="form-radio__input form-input_hide" checked="checked" type="radio" name="gender" value="man" id="man" required="required"/>
+              <label class="form-radio__label" for="man">Мужчина</label>
+            </div>
+            <div class="form-radio">
+              <input class="form-radio__input form-input_hide" type="radio" name="gender" value="woman" id="woman" required="required"/>
+              <label class="form-radio__label" for="woman">Женщина</label>
+            </div>
           </div>
           <label class="form__label" for="birthday">Дата рождения</label>
           <input class="form__input form__input_date" type="date" name="birthday" id="birthday" placeholder="ДД.ММ.ГГГГ" required="required"/>
@@ -183,18 +187,18 @@
           <label class="visually-hidden hidden__label" for="passwordSignUp">Введите пароль:</label>
           <input class="form__input" type="password" name="registrationPassword" id="passwordSignUp" placeholder="Пароль" required="required"/>
           <div class="form-switch">
-            <input class="form-switch__input" type="checkbox" name="iWantALotOfSpam" id="getSpam"/>
+            <input class="form-switch__input form-input_hide" type="checkbox" name="iWantALotOfSpam" id="getSpam"/>
             <label class="form-switch__label" for="getSpam">Получать спецпредложения</label>
           </div>
           <div class="button-arrow">
             <input class="button button_form button-arrow__button" type="submit" id="goPay" value="Перейти к оплате"/>
             <label class="button-arrow__label" for="goPay"></label>
           </div>
-          <div class="input-w two-inputs-w">
+          <div class="input-w two-inputs-row-w">
             <p class="text">Уже есть аккаунт на Toxin</p><a class="button button_light button_light-login" href="#signIn">Войти</a>
           </div>
         </form>
       </fieldset>
     </article>
-  <script type="text/javascript" src="./assets/pages/vendors/vendors.f897073cc7dde9b8e0de.js"></script><script type="text/javascript" src="./assets/pages/index/index.f897073cc7dde9b8e0de.js"></script></body>
+  <script type="text/javascript" src="./assets/pages/vendors/vendors.f0cd8662abfbf51279a6.js"></script><script type="text/javascript" src="./assets/pages/index/index.f0cd8662abfbf51279a6.js"></script></body>
 </html>

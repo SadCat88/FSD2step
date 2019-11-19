@@ -10,16 +10,57 @@
 
         .panel_filters {
             width: 266px;
-            // == 
             margin: 0 60px 0 0;
-            padding: 0;
+
             box-shadow: none;
         }
 
         .catalog-items {
             min-height: 900px;
-            // ==
             flex-grow: 1;
+        }
+    }
+
+    .form-dropdown_dates {
+
+        .form-dropdown-btn__label {
+            &::before {
+                content: "19 авг - 23 авг";
+            }
+        }
+
+        .form-dropdown-btn__input {
+            &:checked~.form-dropdown-list {
+                z-index: 4;
+            }
+        }
+    }
+
+    .form-dropdown_guests {
+        .form-dropdown-btn__label {
+            &::before {
+                content: "3 гостя, 1 младенец";
+            }
+        }
+
+        .form-dropdown-btn__input {
+            &:checked~.form-dropdown-list {
+                z-index: 3;
+            }
+        }
+    }
+
+    .form-dropdown_amenity {
+        .form-dropdown-btn__label {
+            &::before {
+                content: "2 спальни, 2 кровати...";
+            }
+        }
+
+        .form-dropdown-btn__input {
+            &:checked~.form-dropdown-list {
+                z-index: 2;
+            }
         }
     }
 }

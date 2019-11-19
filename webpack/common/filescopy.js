@@ -10,10 +10,10 @@ module.exports = function() {
           from: `${baseConfig.pathVars.PATHS.src}/${baseConfig.pathVars.PATHS.assets}/static`,
           to: ``
         },
-        {
-          from: `${baseConfig.pathVars.PATHS.src}/${baseConfig.pathVars.PATHS.assets}/fonts`,
-          to: `${baseConfig.pathVars.PATHS.assets}/fonts`
-        },
+        // {
+        //   from: `${baseConfig.pathVars.PATHS.src}/${baseConfig.pathVars.PATHS.assets}/fonts`,
+        //   to: `${baseConfig.pathVars.PATHS.assets}/fonts`
+        // },
         {
           from: `${baseConfig.pathVars.PATHS.src}/pages/**/*.svg`,
           to: `${baseConfig.pathVars.PATHS.assets}/img/`,

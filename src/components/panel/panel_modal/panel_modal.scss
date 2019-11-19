@@ -1,0 +1,50 @@
+// Modal panel =========================================
+.panel_modal {
+    position: fixed;
+    z-index: -10;
+
+    padding: 40px 30px 20px;
+
+    .panel__heading {
+        padding-bottom: 19px;
+    }
+
+    .button-arrow {
+        margin: 10px 0 30px 0;
+    }
+
+    &:target {
+        z-index: 2;
+    }
+}
+
+// Mixins ===============================================
+// Login modal
+.panel_login {
+    top: 42.5%;
+    // top: 233px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Registration modal
+.panel_registration {
+    top: 10.5%;
+    // top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    padding: 40px 30px 15px;
+
+    .form-radio {
+        margin-bottom: 24px;
+    }
+
+    .form__heading {
+        margin-top: 10px;
+    }
+
+    .form-switch {
+        margin-bottom: 24px;
+    }
+}
