@@ -1,0 +1,279 @@
+@import '../../assets/scss/utils/vars';
+
+.catalog-items {
+    padding-top: 11px ;
+
+    .catalog-items__heading {
+        margin-bottom: 20px;
+        @extend .main-page-heading;
+    }
+}
+
+.catalog-items-w {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item-w {
+        margin-bottom: 20px;
+    }
+}
+
+.item-images-w {
+    position: relative;
+}
+
+.item {
+    position: relative;
+
+    width: 270px;
+    height: 257px;
+    border-radius: 4px;
+
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    .item-images {
+        position: relative;
+
+        width: 270px;
+        height: 151px;
+
+        .item-images__img {
+            position: absolute;
+            top: 0;
+
+            width: 270px;
+            height: 151px;
+            border-radius: 4px 4px 0 0;
+
+            &.item-images__img-1 {
+                z-index: 4;
+            }
+
+            &.item-images__img-1 {
+                z-index: 3;
+            }
+
+            &.item-images__img-1 {
+                z-index: 2;
+            }
+
+            &.item-images__img-1 {
+                z-index: 1;
+            }
+        }
+
+        .item-images__caption {
+            position: absolute;
+            bottom: -43;
+            left: 20;
+
+            @extend .main-page-heading;
+            font-size: 14px;
+            line-height: 17px;
+
+            .room-num {
+                font-size: 18px;
+                margin: 0 2px 0 3px;
+            }
+
+            .luxe {
+                @extend .main-bold-font;
+                color: $mainColor;
+            }
+        }
+    }
+
+    .item-images__links {
+        position: absolute;
+        bottom: 16;
+        right: 15;
+        z-index: 20;
+
+        .round {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 3px;
+
+            border: 2px solid $mainBgColor;
+            border-radius: 50%;
+
+            &.round_full {
+                background-color: $mainBgColor;
+            }
+        }
+    }
+
+    .item-images__arrow {
+        position: absolute;
+        top: 0;
+        z-index: 21;
+
+        display: block;
+        height: 151px;
+        width: 42px;
+
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.item-images__arrow_left {
+            left: 0;
+
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 4px 0 0 0;
+
+            &::after {
+                content: "expand_more";
+
+                position: absolute;
+                top: 50%;
+                right: 50%;
+
+                display: block;
+                width: 24px;
+                height: 24px;
+
+                @extend .icons-font;
+                color: $mainBgColor;
+                font-size: 24px;
+                line-height: 24px;
+
+                transform: rotate(90deg) translate(-50%, -50%);
+            }
+        }
+
+        &.item-images__arrow_right {
+            right: 0;
+
+            background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 0 4px 0 0;
+
+            &::after {
+                content: "expand_more";
+
+                position: absolute;
+                top: 50%;
+                right: 50%;
+
+                display: block;
+                width: 24px;
+                height: 24px;
+
+                @extend .icons-font;
+                color: $mainBgColor;
+                font-size: 24px;
+                line-height: 24px;
+
+                transform: rotate(-90deg) translate(50%, 50%);
+            }
+        }
+    }
+
+    .item-images:hover~.item-images__arrow {
+        opacity: 1;
+    }
+
+    .item-description {
+        position: relative;
+        display: block;
+
+        height: 86px;
+        width: 270px;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 53;
+            left: 50%;
+            transform: translate(-50%);
+
+            display: block;
+            width: 230px;
+            height: 1px;
+
+            background-color: $dark10;
+        }
+
+        .item-description__price {
+            display: block;
+            width: 100%;
+            padding-right: 19px;
+            padding-top: 24px;
+
+
+            @extend .main-font;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: right;
+
+            .room-price {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+        }
+
+        .item-description__rating {
+            position: absolute;
+            bottom: 0;
+            left: 20;
+
+            .star {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+
+                &::after {
+                    content: "star_border";
+
+                    @extend .icons-font;
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+                    background-image: -ms-linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+                    background-image: -webkit-gradient(linear, left top, left bottom, from($mainColor), to($mainGradientColor));
+                    background-image: -o-linear-gradient(top, $mainColor 0%, $mainGradientColor 100%);
+
+                    @media all and (-ms-high-contrast: none),
+                    (-ms-high-contrast: active) {
+                        /* IE10+ CSS styles go here */
+
+                        color: $mainColor;
+                        background: transparent;
+                    }
+                }
+
+                &.star_full {
+                    &::after {
+                        content: "star";
+                    }
+                }
+            }
+        }
+
+        .item-description__feedback {
+            display: block;
+            width: 100%;
+            padding-right: 19px;
+            padding-top: 24px;
+
+            @extend .main-font;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: right;
+
+            .room-feedback-qty {
+                font-weight: bold;
+            }
+        }
+    }
+}

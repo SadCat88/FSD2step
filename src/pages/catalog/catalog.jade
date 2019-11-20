@@ -98,7 +98,7 @@ block body
                                 input.form-number__input(type="number" value="0" min="0" max="10" step="1" name="qtyBathroom" id="qtyBathroom")
 
 
-                    fieldset.form-dropdown.form-dropdown_checklist.form-dropdown_checklist-w
+                    fieldset.form-dropdown.form-dropdown_checklist.form-dropdown_add-amenity.form-dropdown_checklist-w
                         legend.visually-hidden Дополнительные удобства
                         input.form-dropdown-btn__input.form-input_hide(type="checkbox" id="addAmenity" aria-hidden="true")
                         label.form-dropdown-btn__label.form__label(for="addAmenity" aria-hidden="true") Дополнительные удобства
@@ -125,7 +125,222 @@ block body
                     style.
                         .button_kek {
                             position: absolute;
-                            left: 400px;
+                            top: -775px;
                         }
             section.catalog-items
+                h2.catalog-items__heading.
+                    Номера, которые мы для вас подобрали
+                .catalog-items-w
+                    article.item.item-w
+                        .item-images-w
+                            figure.item-images
+                                img.item-images__img.item-images__img-1(src=require("../../assets/img/rooms/room-888.jpg"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-2(src=require("../../assets/img/rooms/room-slider_2.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-3(src=require("../../assets/img/rooms/room-slider_3.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-4(src=require("../../assets/img/rooms/room-slider_4.png"), alt="Изображение комнаты" width="270" height="151")
+                                figcaption.item-images__caption
+                                    |№ 
+                                    |#[span.room-num 888] 
+                                    |#[span.luxe люкс]
+                       
+                            a.item-images__arrow.item-images__arrow_left(href="#" aria-hidden="true" tabindex="-1")
+                            a.item-images__arrow.item-images__arrow_right(href="#" aria-hidden="true" tabindex="-1")
+
+                            p.item-images__links
+                                a.round.round_full(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                        p.item-description
+                            span.item-description__price
+                                |#[span.room-price 9 990]
+                                |₽ в сутки 
+                            span.item-description__rating
+                                span.visually-hidden Рейтинг: #[span.room-rating 5] звезд 
+                                span.stars
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                            span.item-description__feedback #[span.room-feedback-qty 145] Отзывов 
+                    article.item
+                        .item-images-w
+                            figure.item-images
+                                img.item-images__img.item-images__img-1(src=require("../../assets/img/rooms/room-888.jpg"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-2(src=require("../../assets/img/rooms/room-slider_2.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-3(src=require("../../assets/img/rooms/room-slider_3.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-4(src=require("../../assets/img/rooms/room-slider_4.png"), alt="Изображение комнаты" width="270" height="151")
+                                figcaption.item-images__caption
+                                    |№ 
+                                    |#[span.room-num 888] 
+                                    |#[span.luxe люкс]
+                       
+                            a.item-images__arrow.item-images__arrow_left(href="#" aria-hidden="true" tabindex="-1")
+                            a.item-images__arrow.item-images__arrow_right(href="#" aria-hidden="true" tabindex="-1")
+
+                            p.item-images__links
+                                a.round.round_full(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                        p.item-description
+                            span.item-description__price
+                                |#[span.room-price 9 990]
+                                |₽ в сутки 
+                            span.item-description__rating
+                                span.visually-hidden Рейтинг: #[span.room-rating 5] звезд 
+                                span.stars
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                            span.item-description__feedback #[span.room-feedback-qty 145] Отзывов 
+                    article.item
+                        .item-images-w
+                            figure.item-images
+                                img.item-images__img.item-images__img-1(src=require("../../assets/img/rooms/room-888.jpg"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-2(src=require("../../assets/img/rooms/room-slider_2.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-3(src=require("../../assets/img/rooms/room-slider_3.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-4(src=require("../../assets/img/rooms/room-slider_4.png"), alt="Изображение комнаты" width="270" height="151")
+                                figcaption.item-images__caption
+                                    |№ 
+                                    |#[span.room-num 888] 
+                                    |#[span.luxe люкс]
+                       
+                            a.item-images__arrow.item-images__arrow_left(href="#" aria-hidden="true" tabindex="-1")
+                            a.item-images__arrow.item-images__arrow_right(href="#" aria-hidden="true" tabindex="-1")
+
+                            p.item-images__links
+                                a.round.round_full(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                        p.item-description
+                            span.item-description__price
+                                |#[span.room-price 9 990]
+                                |₽ в сутки 
+                            span.item-description__rating
+                                span.visually-hidden Рейтинг: #[span.room-rating 5] звезд 
+                                span.stars
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                            span.item-description__feedback #[span.room-feedback-qty 145] Отзывов 
+                    article.item
+                        .item-images-w
+                            figure.item-images
+                                img.item-images__img.item-images__img-1(src=require("../../assets/img/rooms/room-888.jpg"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-2(src=require("../../assets/img/rooms/room-slider_2.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-3(src=require("../../assets/img/rooms/room-slider_3.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-4(src=require("../../assets/img/rooms/room-slider_4.png"), alt="Изображение комнаты" width="270" height="151")
+                                figcaption.item-images__caption
+                                    |№ 
+                                    |#[span.room-num 888] 
+                                    |#[span.luxe люкс]
+                       
+                            a.item-images__arrow.item-images__arrow_left(href="#" aria-hidden="true" tabindex="-1")
+                            a.item-images__arrow.item-images__arrow_right(href="#" aria-hidden="true" tabindex="-1")
+
+                            p.item-images__links
+                                a.round.round_full(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                        p.item-description
+                            span.item-description__price
+                                |#[span.room-price 9 990]
+                                |₽ в сутки 
+                            span.item-description__rating
+                                span.visually-hidden Рейтинг: #[span.room-rating 5] звезд 
+                                span.stars
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                            span.item-description__feedback #[span.room-feedback-qty 145] Отзывов 
+                    article.item
+                        .item-images-w
+                            figure.item-images
+                                img.item-images__img.item-images__img-1(src=require("../../assets/img/rooms/room-888.jpg"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-2(src=require("../../assets/img/rooms/room-slider_2.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-3(src=require("../../assets/img/rooms/room-slider_3.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-4(src=require("../../assets/img/rooms/room-slider_4.png"), alt="Изображение комнаты" width="270" height="151")
+                                figcaption.item-images__caption
+                                    |№ 
+                                    |#[span.room-num 888] 
+                                    |#[span.luxe люкс]
+                       
+                            a.item-images__arrow.item-images__arrow_left(href="#" aria-hidden="true" tabindex="-1")
+                            a.item-images__arrow.item-images__arrow_right(href="#" aria-hidden="true" tabindex="-1")
+
+                            p.item-images__links
+                                a.round.round_full(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                        p.item-description
+                            span.item-description__price
+                                |#[span.room-price 9 990]
+                                |₽ в сутки 
+                            span.item-description__rating
+                                span.visually-hidden Рейтинг: #[span.room-rating 5] звезд 
+                                span.stars
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                            span.item-description__feedback #[span.room-feedback-qty 145] Отзывов 
+                    article.item
+                        .item-images-w
+                            figure.item-images
+                                img.item-images__img.item-images__img-1(src=require("../../assets/img/rooms/room-888.jpg"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-2(src=require("../../assets/img/rooms/room-slider_2.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-3(src=require("../../assets/img/rooms/room-slider_3.png"), alt="Изображение комнаты" width="270" height="151")
+                                img.item-images__img.item-images__img-4(src=require("../../assets/img/rooms/room-slider_4.png"), alt="Изображение комнаты" width="270" height="151")
+                                figcaption.item-images__caption
+                                    |№ 
+                                    |#[span.room-num 888] 
+                                    |#[span.luxe люкс]
+                       
+                            a.item-images__arrow.item-images__arrow_left(href="#" aria-hidden="true" tabindex="-1")
+                            a.item-images__arrow.item-images__arrow_right(href="#" aria-hidden="true" tabindex="-1")
+
+                            p.item-images__links
+                                a.round.round_full(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                                a.round(href="#" aria-hidden="true" tabindex="-1")
+                        p.item-description
+                            span.item-description__price
+                                |#[span.room-price 9 990]
+                                |₽ в сутки 
+                            span.item-description__rating
+                                span.visually-hidden Рейтинг: #[span.room-rating 5] звезд 
+                                span.stars
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                                    span.star.star_full
+                            span.item-description__feedback #[span.room-feedback-qty 145] Отзывов 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     include ../../components/footer/footer.jade

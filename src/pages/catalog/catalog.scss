@@ -7,22 +7,22 @@
     .catalog-w {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
 
         .panel_filters {
             width: 266px;
-            margin: 0 60px 0 0;
-
+            
             box-shadow: none;
         }
 
         .catalog-items {
-            min-height: 900px;
-            flex-grow: 1;
+            width: 835px;
+
+
         }
     }
 
     .form-dropdown_dates {
-
         .form-dropdown-btn__label {
             &::before {
                 content: "19 авг - 23 авг";
@@ -60,6 +60,14 @@
         .form-dropdown-btn__input {
             &:checked~.form-dropdown-list {
                 z-index: 2;
+            }
+        }
+    }
+
+    .form-dropdown_add-amenity {
+        .form-dropdown-btn__input {
+            &:checked~.form-dropdown-list {
+                z-index: 1;
             }
         }
     }

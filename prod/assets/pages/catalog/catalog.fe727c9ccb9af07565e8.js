@@ -188,6 +188,17 @@
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/catalog-items/catalog-items.scss":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--4-2!./node_modules/sass-loader/dist/cjs.js??ref--4-3!./src/components/catalog-items/catalog-items.scss ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/footer/footer.scss":
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--4-2!./node_modules/sass-loader/dist/cjs.js??ref--4-3!./src/components/footer/footer.scss ***!
@@ -393,6 +404,33 @@ if (content.locals) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--4-2!../../../node_modules/sass-loader/dist/cjs.js??ref--4-3!./button.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/buttons/button.scss");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+
+/***/ "./src/components/catalog-items/catalog-items.scss":
+/*!*********************************************************!*\
+  !*** ./src/components/catalog-items/catalog-items.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--4-2!../../../node_modules/sass-loader/dist/cjs.js??ref--4-3!./catalog-items.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/catalog-items/catalog-items.scss");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -775,11 +813,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_form_form_double_range_form_double_range_scss__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_form_form_double_range_form_double_range_scss__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _components_form_form_dropdown_form_dropdown_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/form/form-dropdown/form-dropdown.scss */ "./src/components/form/form-dropdown/form-dropdown.scss");
 /* harmony import */ var _components_form_form_dropdown_form_dropdown_scss__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_form_form_dropdown_form_dropdown_scss__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _components_header_header_scss__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/header/header.scss */ "./src/components/header/header.scss");
-/* harmony import */ var _components_header_header_scss__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_header_header_scss__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _components_footer_footer_scss__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/footer/footer.scss */ "./src/components/footer/footer.scss");
-/* harmony import */ var _components_footer_footer_scss__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_components_footer_footer_scss__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _components_catalog_items_catalog_items_scss__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/catalog-items/catalog-items.scss */ "./src/components/catalog-items/catalog-items.scss");
+/* harmony import */ var _components_catalog_items_catalog_items_scss__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_catalog_items_catalog_items_scss__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_header_header_scss__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/header/header.scss */ "./src/components/header/header.scss");
+/* harmony import */ var _components_header_header_scss__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_components_header_header_scss__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _components_footer_footer_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/footer/footer.scss */ "./src/components/footer/footer.scss");
+/* harmony import */ var _components_footer_footer_scss__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_components_footer_footer_scss__WEBPACK_IMPORTED_MODULE_17__);
 // подключение стилей
+
 
 
 
@@ -829,5 +870,5 @@ if (content.locals) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=catalog.f0cd8662abfbf51279a6.js.map
-//# sourceMappingURL=catalog.f0cd8662abfbf51279a6.js.map
+//# sourceMappingURL=catalog.fe727c9ccb9af07565e8.js.map
+//# sourceMappingURL=catalog.fe727c9ccb9af07565e8.js.map

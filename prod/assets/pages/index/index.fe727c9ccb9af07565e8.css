@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .a11y {
   outline: none;
   box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9969ff;
@@ -82,31 +81,25 @@
   font-family: 'Font Awesome 5 Brands';
   font-weight: 900; }
 
-.catalog {
-  background-color: #ffffff;
-  padding: 20px 0 0 0; }
-  .catalog .catalog-w {
+.promo {
+  padding-top: 70px;
+  min-height: 830px;
+  background-color: #ffffff; }
+  .promo.promo_bg-image {
+    background: url(../../img/promo-image-1.jpg) center bottom/cover no-repeat; }
+  .promo .wrapper {
     display: flex;
-    flex-direction: row; }
-    .catalog .catalog-w .panel_filters {
-      width: 266px;
-      margin: 0 60px 0 0;
-      box-shadow: none; }
-    .catalog .catalog-w .catalog-items {
-      min-height: 900px;
-      flex-grow: 1; }
-  .catalog .form-dropdown_dates .form-dropdown-btn__label::before {
-    content: "19 авг - 23 авг"; }
-  .catalog .form-dropdown_dates .form-dropdown-btn__input:checked ~ .form-dropdown-list {
-    z-index: 4; }
-  .catalog .form-dropdown_guests .form-dropdown-btn__label::before {
-    content: "3 гостя, 1 младенец"; }
-  .catalog .form-dropdown_guests .form-dropdown-btn__input:checked ~ .form-dropdown-list {
-    z-index: 3; }
-  .catalog .form-dropdown_amenity .form-dropdown-btn__label::before {
-    content: "2 спальни, 2 кровати..."; }
-  .catalog .form-dropdown_amenity .form-dropdown-btn__input:checked ~ .form-dropdown-list {
-    z-index: 2; }
+    flex-direction: column-reverse; }
+  .promo .button-arrow-w {
+    margin-top: 22px; }
+  .promo .promo-heading {
+    align-self: flex-end;
+    bottom: 0;
+    right: 0;
+    max-width: 297;
+    text-align: right; }
+  .promo .promo-panel-w {
+    margin-bottom: 319; }
 
 .a11y {
   outline: none;
@@ -295,35 +288,6 @@ figure {
 
 fieldset {
   border: none; }
-
-header {
-  outline: 5px dashed rgba(166, 168, 1, 0.5);
-  outline-offset: -5px; }
-
-main {
-  outline: 5px dashed rgba(0, 153, 255, 0.5);
-  outline-offset: -5px; }
-
-footer {
-  outline: 5px dashed rgba(255, 0, 234, 0.5);
-  outline-offset: -5px; }
-
-section {
-  outline: 2px dashed rgba(255, 62, 40, 0.5);
-  outline-offset: -15px; }
-
-.wrapper {
-  outline: 2px dotted purple;
-  outline-offset: -2px; }
-  .wrapper::before {
-    content: '';
-    width: 2px;
-    height: 2000px;
-    background-color: purple;
-    position: absolute;
-    z-index: 100;
-    left: 50%;
-    transform: translate(-50%, -500px); }
 
 @charset "UTF-8";
 .a11y, .button:focus {
@@ -643,36 +607,6 @@ section {
   background-color: #ffffff;
   color: rgba(31, 32, 65, 0.5); }
 
-.panel_filters {
-  padding: 12px 0 0 0; }
-  .panel_filters .dropdown-bottom-btn-w {
-    margin: 35px -10px 19px 0; }
-  .panel_filters .dates-w {
-    margin-bottom: 65px; }
-  .panel_filters .guests-w {
-    margin-bottom: 73px; }
-  .panel_filters .double-range-w {
-    margin-bottom: 28px; }
-    .panel_filters .double-range-w .double-range__input-w {
-      margin-top: 10px;
-      margin-bottom: 8px; }
-  .panel_filters .add-options-w {
-    max-width: 222px;
-    margin-bottom: 19px; }
-    .panel_filters .add-options-w .form__heading {
-      margin-bottom: 17px; }
-    .panel_filters .add-options-w .form-check {
-      margin-bottom: 10px; }
-  .panel_filters .accessibility-w {
-    max-width: 260px;
-    margin-bottom: 20px; }
-    .panel_filters .accessibility-w .form__heading {
-      margin-bottom: 14px; }
-    .panel_filters .accessibility-w .form-check {
-      margin-bottom: 10px; }
-  .panel_filters .amenity-w {
-    margin-bottom: 75px; }
-
 .panel_modal {
   position: fixed;
   z-index: -10;
@@ -700,721 +634,6 @@ section {
     margin-top: 10px; }
   .panel_registration .form-switch {
     margin-bottom: 24px; }
-
-.form-input_hide {
-  position: absolute;
-  left: -10000px;
-  width: 0;
-  height: 0; }
-
-.a11y, .form-radio:focus-within {
-  outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9969ff;
-  z-index: 20; }
-
-.main-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.main-page-heading {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
-  text-transform: none;
-  color: #1F2041; }
-
-.main-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-.inter-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.inter-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.inter-light-font {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.icons-font {
-  font-family: "Material Icons";
-  line-height: 0;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: middle;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga'; }
-
-.awesome-font {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 900; }
-
-.form-radio {
-  position: relative;
-  border-radius: 4px; }
-  .form-radio .form-radio__label {
-    display: inline-block;
-    padding-left: 30px;
-    line-height: 20px;
-    white-space: nowrap;
-    user-select: none; }
-    .form-radio .form-radio__label:hover {
-      cursor: pointer; }
-    .form-radio .form-radio__label::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border: 1px solid #BC9CFF;
-      border-radius: 50%; }
-    .form-radio .form-radio__label::after {
-      position: absolute;
-      left: 4px;
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      border-radius: 50%; }
-  .form-radio .form-radio__input:checked + .form-radio__label::after {
-    content: ""; }
-
-.a11y, .form-switch:focus-within {
-  outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9969ff;
-  z-index: 20; }
-
-.main-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.main-page-heading {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
-  text-transform: none;
-  color: #1F2041; }
-
-.main-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-.inter-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.inter-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.inter-light-font {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.icons-font {
-  font-family: "Material Icons";
-  line-height: 0;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: middle;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga'; }
-
-.awesome-font {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 900; }
-
-.form-switch {
-  position: relative;
-  border-radius: 4px; }
-  .form-switch .form-switch__label {
-    display: inline-block;
-    padding-left: 50px;
-    line-height: 20px;
-    white-space: nowrap;
-    user-select: none; }
-    .form-switch .form-switch__label:hover {
-      cursor: pointer; }
-    .form-switch .form-switch__label::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 40px;
-      height: 20px;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 10px; }
-    .form-switch .form-switch__label::after {
-      content: "";
-      position: absolute;
-      left: 4px;
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      background-color: rgba(31, 32, 65, 0.25);
-      border-radius: 50%; }
-  .form-switch .form-switch__input:checked + .form-switch__label::before {
-    border: 1px solid #BC9CFF; }
-  .form-switch .form-switch__input:checked + .form-switch__label::after {
-    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    transform: translate(20px); }
-
-.a11y, .form-check:focus-within {
-  outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9969ff;
-  z-index: 20; }
-
-.main-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.main-page-heading {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
-  text-transform: none;
-  color: #1F2041; }
-
-.main-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-.inter-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.inter-bold-font, .form-check .form-check__label-bold {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.inter-light-font, .form-check .form-check__label-bold .form-check__description {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.icons-font {
-  font-family: "Material Icons";
-  line-height: 0;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: middle;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga'; }
-
-.awesome-font {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 900; }
-
-.form-check {
-  position: relative;
-  border-radius: 4px; }
-  .form-check .form-check__label {
-    display: inline-block;
-    padding-left: 30px;
-    line-height: 20px;
-    white-space: nowrap;
-    user-select: none; }
-    .form-check .form-check__label .line-wrap-on {
-      white-space: normal; }
-    .form-check .form-check__label:hover {
-      cursor: pointer; }
-    .form-check .form-check__label::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border: 1px solid #BC9CFF;
-      border-radius: 4px; }
-    .form-check .form-check__label::after {
-      position: absolute;
-      left: 6px;
-      top: 6px;
-      width: 6px;
-      height: 4px;
-      border: 2px solid #BC9CFF;
-      box-sizing: content-box;
-      border-top: none;
-      border-right: none;
-      transform: rotate(-45deg); }
-  .form-check .form-check__label-bold .form-check__description {
-    display: block;
-    margin-top: 5px;
-    white-space: normal; }
-  .form-check .form-check__input:checked + .form-check__label::after {
-    content: ""; }
-
-.a11y {
-  outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9969ff;
-  z-index: 20; }
-
-.main-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.main-page-heading {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
-  text-transform: none;
-  color: #1F2041; }
-
-.main-bold-font, .form-number .form-number__input {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-.inter-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.inter-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.inter-light-font, .form-number .form-number__label::after, .form-number .form-number__label::before {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.icons-font {
-  font-family: "Material Icons";
-  line-height: 0;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: middle;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga'; }
-
-.awesome-font {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 900; }
-
-.form-number {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  height: 30px;
-  margin-bottom: 7px; }
-  .form-number .form-number__label {
-    line-height: 30px; }
-    .form-number .form-number__label::after, .form-number .form-number__label::before {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      margin-top: 1px;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 50%;
-      font-size: 18px;
-      text-align: center;
-      background-color: #ffffff; }
-    .form-number .form-number__label::after {
-      content: "+";
-      right: -11;
-      line-height: 30px; }
-    .form-number .form-number__label::before {
-      content: "-";
-      right: 51px;
-      line-height: 28px; }
-  .form-number .form-number__input {
-    width: 59px;
-    border: none;
-    text-align: center; }
-
-.a11y {
-  outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9969ff;
-  z-index: 20; }
-
-.main-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.main-page-heading {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
-  text-transform: none;
-  color: #1F2041; }
-
-.main-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-.inter-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.inter-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.inter-light-font, .form-double-range .double-range__value, .form-double-range .double-range__description {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.icons-font {
-  font-family: "Material Icons";
-  line-height: 0;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: middle;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga'; }
-
-.awesome-font {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 900; }
-
-.form-double-range .double-range__value {
-  white-space: nowrap;
-  user-select: none;
-  text-transform: uppercase; }
-
-.a11y, .form-dropdown .dropdown-bottom-btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9969ff;
-  z-index: 20; }
-
-.main-font, .form-dropdown_input .form-dropdown-btn__label::before {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.main-page-heading {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
-  text-transform: none;
-  color: #1F2041; }
-
-.main-bold-font, .form-dropdown .dropdown-bottom-btn {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041; }
-
-.inter-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.inter-bold-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.75); }
-
-.inter-light-font {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: none;
-  color: rgba(31, 32, 65, 0.5); }
-
-.icons-font, .form-dropdown .form-dropdown-btn__label::after {
-  font-family: "Material Icons";
-  line-height: 0;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  vertical-align: middle;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga'; }
-
-.awesome-font {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 900; }
-
-.form-dropdown {
-  position: relative; }
-  .form-dropdown .form-dropdown-btn__label {
-    position: relative; }
-    .form-dropdown .form-dropdown-btn__label:hover {
-      cursor: pointer; }
-    .form-dropdown .form-dropdown-btn__label::after {
-      content: "expand_more";
-      position: absolute;
-      right: 10px;
-      top: 0px;
-      font-size: 24px;
-      line-height: 15px;
-      text-align: center;
-      color: rgba(31, 32, 65, 0.5); }
-  .form-dropdown .form-dropdown-list {
-    position: absolute;
-    top: 61px;
-    z-index: -10;
-    width: 100%;
-    padding: 5px 17px 0 15px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 0 0 4px 4px;
-    background-color: #ffffff; }
-  .form-dropdown .form-dropdown-btn__input:checked + .form-dropdown-btn__label::after {
-    content: "expand_less"; }
-  .form-dropdown .form-dropdown-btn__input:checked + .form-dropdown-btn__label::before {
-    border-radius: 4px 4px 0 0; }
-  .form-dropdown .form-dropdown-btn__input:checked ~ .form-dropdown-list {
-    z-index: 2; }
-  .form-dropdown .dropdown-bottom-btn {
-    border: none;
-    border-radius: 4px;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; }
-    .form-dropdown .dropdown-bottom-btn:hover {
-      cursor: pointer; }
-    .form-dropdown .dropdown-bottom-btn:active {
-      box-shadow: none; }
-    .form-dropdown .dropdown-bottom-btn.dropdown-bottom-btn_gray {
-      color: rgba(31, 32, 65, 0.5); }
-    .form-dropdown .dropdown-bottom-btn.dropdown-bottom-btn_color {
-      color: #BC9CFF; }
-
-.form-dropdown_input .form-dropdown-btn__label::after {
-  top: 34px;
-  right: 10px; }
-
-.form-dropdown_input .form-dropdown-btn__label::before {
-  content: "Some text...";
-  position: absolute;
-  top: 18px;
-  display: block;
-  width: 100%;
-  height: 44px;
-  padding: 0 15px 0 15px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  line-height: 44px; }
-  .form-dropdown_input .form-dropdown-btn__label::before:hover {
-    cursor: pointer; }
-
-.form-dropdown_checklist .form-dropdown-list {
-  border: none;
-  padding: 0;
-  top: 32; }
-
-.form-dropdown_checklist .form-check {
-  margin-bottom: 10px; }
 
 .a11y, .header .logotype .logotype-link:focus, .header .header-navigation .main-menu__item .main-menu__item-link:focus {
   outline: none;
@@ -1871,5 +1090,5 @@ section {
           content: "\f16d"; }
 
 
-/*# sourceMappingURL=catalog.f0cd8662abfbf51279a6.css.map*/
-/*# sourceMappingURL=catalog.f0cd8662abfbf51279a6.css.map*/
+/*# sourceMappingURL=index.fe727c9ccb9af07565e8.css.map*/
+/*# sourceMappingURL=index.fe727c9ccb9af07565e8.css.map*/

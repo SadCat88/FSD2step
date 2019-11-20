@@ -17,6 +17,7 @@ import "../../components/form/form-number/form-number.scss";
 import "../../components/form/form-double-range/form-double-range.scss";
 import "../../components/form/form-dropdown/form-dropdown.scss";
 
+import "../../components/catalog-items/catalog-items.scss";
 
 import "../../components/header/header.scss";
 import "../../components/footer/footer.scss";
