@@ -44,7 +44,8 @@ const filesCopy = require("./webpack/common/filescopy.js");
 const ENTRIES = [
   // переменная для перечисления точек входа файлов js, которые являются страницами сайта
   "index",
-  "catalog"
+  "catalog",
+  "room-888"
 ];
 
 const PATHS = {

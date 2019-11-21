@@ -1,365 +1,55 @@
-<!DOCTYPE  html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
-    <title>Catalog
-    </title>
-  <link rel="shortcut icon" href="./favicon.ico"><link href="./assets/pages/vendors/vendors.fe727c9ccb9af07565e8.css" rel="stylesheet"><link href="./assets/pages/catalog/catalog.fe727c9ccb9af07565e8.css" rel="stylesheet"></head>
-  <body>
-<header class="header">
-  <div class="wrapper wrapper-header">
-    <div class="logotype"><a class="logotype-link" href="./index.html"><img src="assets/img/logo.svg" alt="Логотип"></a>
-      <p class="visually-hidden">TOXIN</p>
-    </div>
-    <nav class="header-navigation">
-      <ul class="header-menu">
-        <li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">О нас</a></li>
-        <li class="main-menu__item"><a class="main-menu__item-link __interactive-link main-menu__submenu" href="#" aria-haspopup="true">Услуги</a>
-          <ul class="header-submenu">
-            <li class="header-submenu__item"><a class="main-menu__item-link" href="#">Услуга 1</a></li>
-            <li class="header-submenu__item"><a class="main-menu__item-link" href="#">Услуга 2</a></li>
-            <li class="header-submenu__item"><a class="main-menu__item-link" href="#">Услуга 3</a></li>
-          </ul>
-        </li>
-        <li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">Вакансии</a></li>
-        <li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">Новости</a></li>
-        <li class="main-menu__item"><a class="main-menu__item-link __interactive-link main-menu__submenu" href="#" aria-haspopup="true">Соглашения</a>
-          <ul class="header-submenu">
-            <li class="header-submenu__item"><a class="main-menu__item-link" href="#">Соглашение 1</a></li>
-            <li class="header-submenu__item"><a class="main-menu__item-link" href="#">Соглашение 2</a></li>
-            <li class="header-submenu__item"><a class="main-menu__item-link" href="#">Соглашение 3</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="user-menu">
-        <li class="user-menu__input"><a class="button button_light button_light-input" href="#signIn">Войти</a></li>
-        <li class="user-menu__registration"><a class="button button_dark button_registration" href="#signUp">Зарегистрироваться</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-    <main class="catalog">
-      <div class="wrapper catalog-w">
-        <section class="panel panel_filters">
-          <form class="form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="form-dropdown form-dropdown_input form-dropdown_dates dates-w">
-              <legend class="visually-hidden">Даты пребывания в отеле</legend>
-              <input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="datesOfSta" aria-hidden="true"/>
-              <label class="form-dropdown-btn__label form__label" for="datesOfSta" aria-hidden="true">Даты пребывания в отеле</label>
-              <div class="form-dropdown-list">
-                <div class="input-w input-small-w">
-                  <label class="form__label" for="arrivalDate">Прибытие</label>
-                  <input class="form__input form__input_date" type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required"/>
-                </div>
-                <div class="input-w input-small-w">
-                  <label class="form__label" for="departureDate">Выезд</label>
-                  <input class="form__input form__input_date" type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required"/>
-                </div>
-                <div class="two-inputs-row-w dropdown-bottom-btn-w">
-                  <input class="dropdown-bottom-btn dropdown-bottom-btn_gray" type="button" value="Очистить"/>
-                  <input class="dropdown-bottom-btn dropdown-bottom-btn_color" type="button" value="Применить"/>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="form-dropdown form-dropdown_input form-dropdown_guests guests-w">
-              <legend class="visually-hidden">Гости</legend>
-              <input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="qtyPeople" aria-hidden="true"/>
-              <label class="form-dropdown-btn__label form__label" for="qtyPeople" aria-hidden="true">Гости</label>
-              <div class="form-dropdown-list">
-                <div class="form-number">
-                  <label class="form__label form-number__label" for="qtyAdult">Взрослые</label>
-                  <input class="form-number__input" type="number" value="1" min="0" max="10" step="1" name="qtyAdult" id="qtyAdult"/>
-                </div>
-                <div class="form-number">
-                  <label class="form__label form-number__label" for="qtyChildren">Дети</label>
-                  <input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyChildren" id="qtyChildren"/>
-                </div>
-                <div class="form-number">
-                  <label class="form__label form-number__label" for="qtyBaby">Младенцы</label>
-                  <input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyBaby" id="qtyBaby"/>
-                </div>
-                <div class="two-inputs-row-w dropdown-bottom-btn-w">
-                  <input class="dropdown-bottom-btn dropdown-bottom-btn_gray" type="button" value="Очистить"/>
-                  <input class="dropdown-bottom-btn dropdown-bottom-btn_color" type="button" value="Применить"/>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="form-double-range double-range-w">
-              <div class="two-inputs-row-w">
-                <legend class="form__heading double-range__heading">Диапазон цены</legend>
-                <p class="double-range__value"><span class="min-price">5 000</span>₽
-                  -
-                   
-                  <span class="max-price">10 000</span>₽
-                </p>
-              </div>
-              <div class="double-range__input two-inputs-row-w double-range__input-w">
-                <div class="form-range form-range_min">
-                  <label class="visually-hidden" for="minRange">Минимальная цена за номер</label>
-                  <input class="form-range__input form-range__input_min" type="range" value="5000" min="0" max="30000" step="1000" id="minRange"/>
-                </div>
-                <div class="form-range form-range_max">
-                  <label class="visually-hidden" for="maxRange">Максимальная цена за номер</label>
-                  <input class="form-range__input form-range__input_max" type="range" value="10000" min="0" max="30000" step="1000" id="maxRange"/>
-                </div>
-              </div>
-              <p class="double-range__description">Стоимость за сутки пребывания в номере</p>
-            </fieldset>
-            <fieldset class="add-options-w">
-              <legend class="form__heading">Дополнительные опции</legend>
-              <div class="form-check">
-                <input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="smoking" value="smoking"/>
-                <label class="form-check__label" for="smoking">Можно курить</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="pet" value="pet" checked="checked"/>
-                <label class="form-check__label" for="pet">Можно с питомцами</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="friends" value="tenFriends" checked="checked"/>
-                <label class="form-check__label" for="friends"><span class="line-wrap-on">Можно пригласить гостей (до 10 человек)</span></label>
-              </div>
-            </fieldset>
-            <fieldset class="accessibility-w">
-              <legend class="form__heading">Доступность</legend>
-              <div class="form-check">
-                <input class="form-check__input form-input_hide" type="checkbox" name="accessibility" id="wideHall" value="wideHall"/>
-                <label class="form-check__label form-check__label-bold" for="wideHall">
-                   Широкий коридор
-                  <span class="form-check__description">Ширина коридоров в номере не менее 91 см.</span>
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check__input form-input_hide" type="checkbox" name="accessibility" id="assistantForInvalid" value="assistantForInvalid"/>
-                <label class="form-check__label form-check__label-bold" for="assistantForInvalid">
-                   Помощник для инвалидов
-                  <span class="form-check__description">На 1 этаже вас встретит специалист и проводит до номера.</span>
-                </label>
-              </div>
-            </fieldset>
-            <fieldset class="form-dropdown form-dropdown_input form-dropdown_amenity amenity-w">
-              <legend class="visually-hidden">Удобства номера</legend>
-              <input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="roomAmenity" aria-hidden="true"/>
-              <label class="form-dropdown-btn__label form__label" for="roomAmenity" aria-hidden="true">Удобства номера</label>
-              <div class="form-dropdown-list">
-                <div class="form-number">
-                  <label class="form__label form-number__label" for="qtyBedroom">Спальни</label>
-                  <input class="form-number__input" type="number" value="2" min="1" max="10" step="1" name="qtyBedroom" id="qtyBedroom"/>
-                </div>
-                <div class="form-number">
-                  <label class="form__label form-number__label" for="qtyBed">Кровати</label>
-                  <input class="form-number__input" type="number" value="2" min="1" max="10" step="1" name="qtyBed" id="qtyBed"/>
-                </div>
-                <div class="form-number">
-                  <label class="form__label form-number__label" for="qtyBathroom">Ванные комнаты</label>
-                  <input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyBathroom" id="qtyBathroom"/>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="form-dropdown form-dropdown_checklist form-dropdown_add-amenity form-dropdown_checklist-w">
-              <legend class="visually-hidden">Дополнительные удобства</legend>
-              <input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="addAmenity" aria-hidden="true"/>
-              <label class="form-dropdown-btn__label form__label" for="addAmenity" aria-hidden="true">Дополнительные удобства</label>
-              <div class="form-dropdown-list">
-                <div class="form-check">
-                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="breakfast" value="breakfast"/>
-                  <label class="form-check__label" for="breakfast">Завтрак</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="writingTable" value="writingTable"/>
-                  <label class="form-check__label" for="writingTable">Письменный стол</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="feedingChair" value="feedingChair"/>
-                  <label class="form-check__label" for="feedingChair">Стул для кормления</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="babyBed" value="babyBed"/>
-                  <label class="form-check__label" for="babyBed">Кроватка</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="TV" value="TV"/>
-                  <label class="form-check__label" for="TV">Телевизор</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="shampoo" value="shampoo"/>
-                  <label class="form-check__label" for="shampoo">Шампунь</label>
-                </div>
-              </div>
-            </fieldset>
-            <input class="button button_form button_kek" type="submit" value="Тест формы"/>
-            <style>
-              .button_kek {
-                  position: absolute;
-                  top: -775px;
-              }
-            </style>
-          </form>
-        </section>
-        <section class="catalog-items">
-          <h2 class="catalog-items__heading">Номера, которые мы для вас подобрали</h2>
-          <div class="catalog-items-w">
-            <article class="item item-w">
-              <div class="item-images-w">
-                <figure class="item-images"><img class="item-images__img item-images__img-1" src="../../img/room-888.jpg" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-2" src="../../img/room-slider_2.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-3" src="../../img/room-slider_3.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-4" src="../../img/room-slider_4.png" alt="Изображение комнаты" width="270" height="151"/>
-                  <figcaption class="item-images__caption">
-                    № 
-                    <span class="room-num">888</span> 
-                    <span class="luxe">люкс</span>
-                  </figcaption>
-                </figure><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a>
-                <p class="item-images__links"><a class="round round_full" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a></p>
-              </div>
-              <p class="item-description"><span class="item-description__price"><span class="room-price">9 990</span>
-                  ₽ в сутки </span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд </span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">145</span> Отзывов </span></p>
-            </article>
-            <article class="item">
-              <div class="item-images-w">
-                <figure class="item-images"><img class="item-images__img item-images__img-1" src="../../img/room-888.jpg" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-2" src="../../img/room-slider_2.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-3" src="../../img/room-slider_3.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-4" src="../../img/room-slider_4.png" alt="Изображение комнаты" width="270" height="151"/>
-                  <figcaption class="item-images__caption">
-                    № 
-                    <span class="room-num">888</span> 
-                    <span class="luxe">люкс</span>
-                  </figcaption>
-                </figure><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a>
-                <p class="item-images__links"><a class="round round_full" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a></p>
-              </div>
-              <p class="item-description"><span class="item-description__price"><span class="room-price">9 990</span>
-                  ₽ в сутки </span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд </span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">145</span> Отзывов </span></p>
-            </article>
-            <article class="item">
-              <div class="item-images-w">
-                <figure class="item-images"><img class="item-images__img item-images__img-1" src="../../img/room-888.jpg" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-2" src="../../img/room-slider_2.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-3" src="../../img/room-slider_3.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-4" src="../../img/room-slider_4.png" alt="Изображение комнаты" width="270" height="151"/>
-                  <figcaption class="item-images__caption">
-                    № 
-                    <span class="room-num">888</span> 
-                    <span class="luxe">люкс</span>
-                  </figcaption>
-                </figure><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a>
-                <p class="item-images__links"><a class="round round_full" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a></p>
-              </div>
-              <p class="item-description"><span class="item-description__price"><span class="room-price">9 990</span>
-                  ₽ в сутки </span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд </span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">145</span> Отзывов </span></p>
-            </article>
-            <article class="item">
-              <div class="item-images-w">
-                <figure class="item-images"><img class="item-images__img item-images__img-1" src="../../img/room-888.jpg" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-2" src="../../img/room-slider_2.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-3" src="../../img/room-slider_3.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-4" src="../../img/room-slider_4.png" alt="Изображение комнаты" width="270" height="151"/>
-                  <figcaption class="item-images__caption">
-                    № 
-                    <span class="room-num">888</span> 
-                    <span class="luxe">люкс</span>
-                  </figcaption>
-                </figure><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a>
-                <p class="item-images__links"><a class="round round_full" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a></p>
-              </div>
-              <p class="item-description"><span class="item-description__price"><span class="room-price">9 990</span>
-                  ₽ в сутки </span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд </span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">145</span> Отзывов </span></p>
-            </article>
-            <article class="item">
-              <div class="item-images-w">
-                <figure class="item-images"><img class="item-images__img item-images__img-1" src="../../img/room-888.jpg" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-2" src="../../img/room-slider_2.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-3" src="../../img/room-slider_3.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-4" src="../../img/room-slider_4.png" alt="Изображение комнаты" width="270" height="151"/>
-                  <figcaption class="item-images__caption">
-                    № 
-                    <span class="room-num">888</span> 
-                    <span class="luxe">люкс</span>
-                  </figcaption>
-                </figure><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a>
-                <p class="item-images__links"><a class="round round_full" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a></p>
-              </div>
-              <p class="item-description"><span class="item-description__price"><span class="room-price">9 990</span>
-                  ₽ в сутки </span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд </span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">145</span> Отзывов </span></p>
-            </article>
-            <article class="item">
-              <div class="item-images-w">
-                <figure class="item-images"><img class="item-images__img item-images__img-1" src="../../img/room-888.jpg" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-2" src="../../img/room-slider_2.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-3" src="../../img/room-slider_3.png" alt="Изображение комнаты" width="270" height="151"/><img class="item-images__img item-images__img-4" src="../../img/room-slider_4.png" alt="Изображение комнаты" width="270" height="151"/>
-                  <figcaption class="item-images__caption">
-                    № 
-                    <span class="room-num">888</span> 
-                    <span class="luxe">люкс</span>
-                  </figcaption>
-                </figure><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a>
-                <p class="item-images__links"><a class="round round_full" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a><a class="round" href="#" aria-hidden="true" tabindex="-1"></a></p>
-              </div>
-              <p class="item-description"><span class="item-description__price"><span class="room-price">9 990</span>
-                  ₽ в сутки </span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд </span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">145</span> Отзывов </span></p>
-            </article>
-          </div>
-        </section>
-      </div>
-    </main>
-<footer class="footer">
-  <section class="main-footer">
-    <div class="wrapper main-footer-w">
-      <div class="logo-w">
-        <div class="logotype"><img src="assets/img/logo.svg" alt="Логотип">
-          <p class="visually-hidden">TOXIN</p>
-        </div>
-        <p class="footer-message">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
-      </div>
-      <nav class="footer-navigation">
-        <h3 class="visually-hidden">Навигация по сайту</h3>
-        <ul class="footer-menu">
-          <li class="footer-menu__item footer-menu__heading">Навигация
-            <ul class="footer-menu__item-submenu">
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">О нас</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Новости</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Служба поддержки</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">
-                  Услуги
-                  </a></li>
-            </ul>
-          </li>
-          <li class="footer-menu__item footer-menu__heading">О нас
-            <ul class="footer-menu__item-submenu">
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">О сервисе</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Наша команда</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Вакансии</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">
-                  Инвесторы
-                  </a></li>
-            </ul>
-          </li>
-          <li class="footer-menu__item footer-menu__heading">Служба поддержки
-            <ul class="footer-menu__item-submenu">
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Соглашения</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Сообщество</a></li>
-              <li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">
-                  Связь с нами                 
-                  </a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <div class="subscribe"><b class="subscribe__heading">Подписка</b>
-        <p class="subscribe__message">Получайте специальные предложения и новости сервиса</p>
-        <form class="form" method="post" action="https://echo.htmlacademy.ru">
-          <label class="visually-hidden hidden__label" for="subscribeEmail">Введите почту для подписки:</label>
-          <div class="inner-btn">
-            <input class="inner-btn__input form__input" type="text" name="name" id="subscribeEmail" placeholder="Email" required="required">
-            <div class="arrow-w">
-              <label class="inner-btn__label" for="subscribeBtn"></label>
-              <input class="inner-btn__button button visually-hidden" type="submit" value="Подписаться" tabindex="-1" id="subscribeBtn">
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-  <section class="second-footer">
-    <div class="wrapper second-footer-w">
-      <p class="copyright">Copyright © 2018 Toxin отель. Все права заXищены.</p>
-      <p class="visually-hidden">Наши соцсети:</p>
-      <ul class="social">
-        <li><a class="social__item social__item_twitter" href="#">Twitter</a></li>
-        <li><a class="social__item social__item_facebook" href="#">Facebook</a></li>
-        <li><a class="social__item social__item_instagram" href="#">Instagram</a></li>
-      </ul>
-    </div>
-  </section>
-</footer>
-  <script type="text/javascript" src="./assets/pages/vendors/vendors.fe727c9ccb9af07565e8.js"></script><script type="text/javascript" src="./assets/pages/catalog/catalog.fe727c9ccb9af07565e8.js"></script></body>
-</html>
+<!DOCTYPE  html><html lang="ru"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/><title>Catalog</title><link rel="shortcut icon" href="./favicon.ico"><link href="./vendors.1c591927dafa7d0d39c2.css" rel="stylesheet"><link href="./catalog.1c591927dafa7d0d39c2.css" rel="stylesheet"></head><body><header class="header"><div class="wrapper wrapper-header"><div class="logotype"><a class="logotype-link" href="./index.html"><img src="assets/img/logo.svg" alt="Логотип"></a><p class="visually-hidden">TOXIN</p></div><nav class="header-navigation"><ul class="header-menu"><li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">О нас</a></li><li class="main-menu__item"><a class="main-menu__item-link __interactive-link main-menu__submenu" href="#" aria-haspopup="true">Услуги</a><ul class="header-submenu"><li class="header-submenu__item"><a class="main-menu__item-link" href="#">Услуга 1</a></li><li class="header-submenu__item"><a class="main-menu__item-link" href="#">Услуга 2</a></li><li class="header-submenu__item"><a class="main-menu__item-link" href="#">Услуга 3</a></li></ul></li><li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">Вакансии</a></li><li class="main-menu__item"><a class="main-menu__item-link __interactive-link" href="#">Новости</a></li><li class="main-menu__item"><a class="main-menu__item-link __interactive-link main-menu__submenu" href="#" aria-haspopup="true">Соглашения</a><ul class="header-submenu"><li class="header-submenu__item"><a class="main-menu__item-link" href="#">Соглашение 1</a></li><li class="header-submenu__item"><a class="main-menu__item-link" href="#">Соглашение 2</a></li><li class="header-submenu__item"><a class="main-menu__item-link" href="#">Соглашение 3</a></li></ul></li></ul><ul class="user-menu"><li class="user-menu__input"><a class="button button_light button_light-input" href="#signIn">Войти</a></li><li class="user-menu__registration"><a class="button button_dark button_registration" href="#signUp">Зарегистрироваться</a></li></ul></nav></div></header><main class="catalog"><div class="wrapper catalog-w"><h1 class="visually-hidden">Каталог номеров</h1><section class="panel panel_filters"><form class="form" method="post" action="https://echo.htmlacademy.ru"><fieldset class="form-dropdown form-dropdown_input form-dropdown_dates dates-w"><legend class="visually-hidden">Даты пребывания в отеле</legend><input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="datesOfSta" aria-hidden="true"/><label class="form-dropdown-btn__label form__label" for="datesOfSta" aria-hidden="true">Даты пребывания в отеле</label><div class="form-dropdown-list"><div class="input-w input-small-w"><label class="form__label" for="arrivalDate">Прибытие</label><input class="form__input form__input_date" type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required"/></div><div class="input-w input-small-w"><label class="form__label" for="departureDate">Выезд</label><input class="form__input form__input_date" type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required"/></div><div class="two-inputs-row-w dropdown-bottom-btn-w"><input class="dropdown-bottom-btn dropdown-bottom-btn_gray" type="button" value="Очистить"/><input class="dropdown-bottom-btn dropdown-bottom-btn_color" type="button" value="Применить"/></div></div></fieldset><fieldset class="form-dropdown form-dropdown_input form-dropdown_guests guests-w"><legend class="visually-hidden">Гости</legend><input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="qtyPeople" aria-hidden="true"/><label class="form-dropdown-btn__label form__label" for="qtyPeople" aria-hidden="true">Гости</label><div class="form-dropdown-list"><div class="form-number"><label class="form__label form-number__label" for="qtyAdult">Взрослые</label><input class="form-number__input" type="number" value="1" min="0" max="10" step="1" name="qtyAdult" id="qtyAdult"/></div><div class="form-number"><label class="form__label form-number__label" for="qtyChildren">Дети</label><input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyChildren" id="qtyChildren"/></div><div class="form-number"><label class="form__label form-number__label" for="qtyBaby">Младенцы</label><input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyBaby" id="qtyBaby"/></div><div class="two-inputs-row-w dropdown-bottom-btn-w"><input class="dropdown-bottom-btn dropdown-bottom-btn_gray" type="button" value="Очистить"/><input class="dropdown-bottom-btn dropdown-bottom-btn_color" type="button" value="Применить"/></div></div></fieldset><fieldset class="form-double-range double-range-w"><div class="two-inputs-row-w"><legend class="form__heading double-range__heading">Диапазон цены</legend><p class="double-range__value"><span class="min-price">5 000</span>₽
+-
+ 
+<span class="max-price">10 000</span>₽</p></div><div class="double-range__input two-inputs-row-w double-range__input-w"><div class="form-range form-range_min"><label class="visually-hidden" for="minRange">Минимальная цена за номер</label><input class="form-range__input form-range__input_min" type="range" value="5000" min="0" max="30000" step="1000" id="minRange"/></div><div class="form-range form-range_max"><label class="visually-hidden" for="maxRange">Максимальная цена за номер</label><input class="form-range__input form-range__input_max" type="range" value="10000" min="0" max="30000" step="1000" id="maxRange"/></div></div><p class="double-range__description">Стоимость за сутки пребывания в номере</p></fieldset><fieldset class="add-options-w"><legend class="form__heading">Дополнительные опции</legend><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="smoking" value="smoking"/><label class="form-check__label" for="smoking">Можно курить</label></div><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="pet" value="pet" checked="checked"/><label class="form-check__label" for="pet">Можно с питомцами</label></div><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="allowed" id="friends" value="tenFriends" checked="checked"/><label class="form-check__label" for="friends"><span class="line-wrap-on">Можно пригласить гостей (до 10 человек)</span></label></div></fieldset><fieldset class="accessibility-w"><legend class="form__heading">Доступность</legend><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="accessibility" id="wideHall" value="wideHall"/><label class="form-check__label form-check__label-bold" for="wideHall"> Широкий коридор
+<span class="form-check__description">Ширина коридоров в номере не менее 91 см.</span></label></div><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="accessibility" id="assistantForInvalid" value="assistantForInvalid"/><label class="form-check__label form-check__label-bold" for="assistantForInvalid"> Помощник для инвалидов
+<span class="form-check__description">На 1 этаже вас встретит специалист и проводит до номера.</span></label></div></fieldset><fieldset class="form-dropdown form-dropdown_input form-dropdown_amenity amenity-w"><legend class="visually-hidden">Удобства номера</legend><input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="roomAmenity" aria-hidden="true"/><label class="form-dropdown-btn__label form__label" for="roomAmenity" aria-hidden="true">Удобства номера</label><div class="form-dropdown-list"><div class="form-number"><label class="form__label form-number__label" for="qtyBedroom">Спальни</label><input class="form-number__input" type="number" value="2" min="1" max="10" step="1" name="qtyBedroom" id="qtyBedroom"/></div><div class="form-number"><label class="form__label form-number__label" for="qtyBed">Кровати</label><input class="form-number__input" type="number" value="2" min="1" max="10" step="1" name="qtyBed" id="qtyBed"/></div><div class="form-number"><label class="form__label form-number__label" for="qtyBathroom">Ванные комнаты</label><input class="form-number__input" type="number" value="0" min="0" max="10" step="1" name="qtyBathroom" id="qtyBathroom"/></div></div></fieldset><fieldset class="form-dropdown form-dropdown_checklist form-dropdown_add-amenity form-dropdown_checklist-w"><legend class="visually-hidden">Дополнительные удобства</legend><input class="form-dropdown-btn__input form-input_hide" type="checkbox" id="addAmenity" aria-hidden="true"/><label class="form-dropdown-btn__label form__label" for="addAmenity" aria-hidden="true">Дополнительные удобства</label><div class="form-dropdown-list"><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="breakfast" value="breakfast"/><label class="form-check__label" for="breakfast">Завтрак</label></div><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="writingTable" value="writingTable"/><label class="form-check__label" for="writingTable">Письменный стол</label></div><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="feedingChair" value="feedingChair"/><label class="form-check__label" for="feedingChair">Стул для кормления</label></div><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="babyBed" value="babyBed"/><label class="form-check__label" for="babyBed">Кроватка</label></div><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="TV" value="TV"/><label class="form-check__label" for="TV">Телевизор</label></div><div class="form-check"><input class="form-check__input form-input_hide" type="checkbox" name="addAmenity" id="shampoo" value="shampoo"/><label class="form-check__label" for="shampoo">Шампунь</label></div></div></fieldset><input class="button button_form button_kek" type="submit" value="Тест формы"/><style>.button_kek {
+    position: absolute;
+    top: -775px;
+    left: 20px;
+    background-color: red;
+    outline: 2px solid red;
+}
+
+</style></form></section><section class="catalog-items"><h2 class="catalog-items__heading">Номера, которые мы для вас подобрали</h2><div class="catalog-items-w"><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-888.html"><img class="item-images__img" src="assets/img/room-888.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">888</span> 
+<span class="luxe">люкс</span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">9 990</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">145</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-840.html"><img class="item-images__img" src="assets/img/room-840.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">840</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">9 900</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">4</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">65</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-980.html"><img class="item-images__img" src="assets/img/room-980.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">980</span> 
+<span class="luxe">люкс</span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">8 500</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">3</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star"></span><span class="star"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">35</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-856.html"><img class="item-images__img" src="assets/img/room-856.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">856</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">7 300</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">19</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-740.html"><img class="item-images__img" src="assets/img/room-740.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">740</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">6 000</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">4</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">44</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-982.html"><img class="item-images__img" src="assets/img/room-982.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">982</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">8 500</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">3</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star"></span><span class="star"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">56</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-678.html"><img class="item-images__img" src="assets/img/room-678.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">678</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">5 500</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">45</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-450.html"><img class="item-images__img" src="assets/img/room-450.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">450</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">5 300</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">4</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">39</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-350.html"><img class="item-images__img" src="assets/img/room-350.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">350</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">5 000</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">3</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star"></span><span class="star"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">77</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-666.html"><img class="item-images__img" src="assets/img/room-666.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">666</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">5 000</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">5</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">25</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-444.html"><img class="item-images__img" src="assets/img/room-444.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">444</span> 
+<span class="luxe"></span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">5 000</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">3</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star"></span><span class="star"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">15</span> Отзывов</span></p></div></article><article class="item item-w"><div class="item-images-w"><figure class="item-images"><a href="room-352.html"><img class="item-images__img" src="assets/img/room-352.jpg" alt="Изображение комнаты" width="270" height="151"/></a><figcaption class="item-images__caption">№ 
+<span class="room-num">352</span> 
+<span class="luxe">люкс</span></figcaption><a class="item-images__arrow item-images__arrow_left" href="#" aria-hidden="true" tabindex="-1"></a><a class="item-images__arrow item-images__arrow_right" href="#" aria-hidden="true" tabindex="-1"></a><p class="item-images__links"><span class="round round_full"></span><span class="round"></span><span class="round"></span><span class="round"></span></p></figure><p class="item-description"><span class="item-description__price"><span class="room-price">5 000</span>
+₽ в сутки</span><span class="item-description__rating"><span class="visually-hidden">Рейтинг: <span class="room-rating">3</span> звезд</span><span class="stars"><span class="star star_full"></span><span class="star star_full"></span><span class="star star_full"></span><span class="star"></span><span class="star"></span></span></span><span class="item-description__feedback"><span class="room-feedback-qty">55</span> Отзывов</span></p></div></article></div><nav class="pagination-nav"><ul class="pagination"><li class="pagination__item"><a class="pagination__item-link pagination__item-link_first" href="#">1</a></li><li class="pagination__item"> <a class="pagination__item-link" href="#">2</a></li><li class="pagination__item"> <a class="pagination__item-link" href="#">3</a></li><li class="pagination__item">...</li><li class="pagination__item"> <a class="pagination__item-link" href="#">15</a></li><li class="pagination__item"> <a class="pagination__item-link pagination__item-link_last" href="#"><span class="visually-hidden">Next</span></a></li></ul><p class="pagination-nav__description">1 – 12 из 100+ вариантов аренды
+
+</p></nav></section></div></main><footer class="footer"><section class="main-footer"><div class="wrapper main-footer-w"><div class="logo-w"><div class="logotype"><img src="assets/img/logo.svg" alt="Логотип"><p class="visually-hidden">TOXIN</p></div><p class="footer-message">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p></div><nav class="footer-navigation"><h3 class="visually-hidden">Навигация по сайту</h3><ul class="footer-menu"><li class="footer-menu__item footer-menu__heading">Навигация<ul class="footer-menu__item-submenu"><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">О нас</a></li><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Новости</a></li><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Служба поддержки</a></li><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Услуги
+</a></li></ul></li><li class="footer-menu__item footer-menu__heading">О нас<ul class="footer-menu__item-submenu"><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">О сервисе</a></li><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Наша команда</a></li><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Вакансии</a></li><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Инвесторы
+</a></li></ul></li><li class="footer-menu__item footer-menu__heading">Служба поддержки<ul class="footer-menu__item-submenu"><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Соглашения</a></li><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Сообщество</a></li><li class="footer-menu__item"> <a class="footer-menu__item-link __interactive-link" href="#">Связь с нами                 
+</a></li></ul></li></ul></nav><div class="subscribe"><b class="subscribe__heading">Подписка</b><p class="subscribe__message">Получайте специальные предложения и новости сервиса</p><form class="form" method="post" action="https://echo.htmlacademy.ru"><label class="visually-hidden hidden__label" for="subscribeEmail">Введите почту для подписки:</label><div class="inner-btn"><input class="inner-btn__input form__input" type="text" name="name" id="subscribeEmail" placeholder="Email" required="required"><div class="arrow-w"><label class="inner-btn__label" for="subscribeBtn"></label><input class="inner-btn__button button visually-hidden" type="submit" value="Подписаться" tabindex="-1" id="subscribeBtn"></div></div></form></div></div></section><section class="second-footer"><div class="wrapper second-footer-w"><p class="copyright">Copyright © 2018 Toxin отель. Все права заXищены.</p><p class="visually-hidden">Наши соцсети:</p><ul class="social"><li><a class="social__item social__item_twitter" href="#">Twitter</a></li><li><a class="social__item social__item_facebook" href="#">Facebook</a></li><li><a class="social__item social__item_instagram" href="#">Instagram</a></li></ul></div></section></footer><script type="text/javascript" src="./assets/pages/vendors/vendors.1c591927dafa7d0d39c2.js"></script><script type="text/javascript" src="./assets/pages/catalog/catalog.1c591927dafa7d0d39c2.js"></script></body></html>

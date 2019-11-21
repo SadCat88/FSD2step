@@ -12,7 +12,7 @@ module.exports = function() {
             options: {
               name: "[name].[ext]",
               // маска для сохранения файлов - имя
-              publicPath: `../../fonts`,
+              publicPath: `${baseConfig.pathVars.PATHS.assets}/fonts`,
               // путь для добавления к шрифтам в css
               outputPath: `${baseConfig.pathVars.PATHS.assets}/fonts`
               // маска для сохранения файлов - путь

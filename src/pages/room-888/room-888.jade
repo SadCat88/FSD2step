@@ -1,0 +1,133 @@
+extends ../../templates/base.jade
+block title
+    | Room № 888
+block body
+    include ../../components/header/header.jade
+    main.room.clearfix
+        p.room-images.clearfix
+            img(src=require("./room-888_big.jpg") alt="Изображение комнаты").room-images__img.room-images__img_big
+            img(src=require("./room-888_small_1.jpg") alt="Изображение комнаты").room-images__img.room-images__img_small
+            img(src=require("./room-888_small_2.jpg") alt="Изображение комнаты").room-images__img.room-images__img_small
+
+
+        .wrapper
+            .room-w
+                h1.visually-hidden Описание комнаты
+
+                .description.description-w
+                    h2.description-heading.room-heading Сведения о номере
+                    ul.description-list
+                        li.description-list__item
+                            span.icon.icon_comfort
+                            span.item.
+                                #[span.item__heading Комфорт]
+                                #[span.item__text Шумопоглощающие стены]
+                        li.description-list__item
+                            span.icon.icon_convenience
+                            span.item.
+                                #[span.item__heading Удобство]
+                                #[span.item__text Окно в каждой из спален]
+                        li.description-list__item
+                            span.icon.icon_cosiness
+                            span.item.
+                                #[span.item__heading Уют]
+                                #[span.item__text Номер оснащён камином]
+
+                .feedback-analyze
+                    h2.feedback-analyze-heading.room-heading Впечатления от номера
+                    .diagram
+                        .diagram-graphic
+                        span.diagram-label #[span.qty 260] #[span.desc голосов]
+                    ul.feedback-analyze-list
+                        li.feedback-analyze-list__item.excellent Великолепно
+                        li.feedback-analyze-list__item.good Хорошо
+                        li.feedback-analyze-list__item.satisfactorily Удовлетворительно
+                        li.feedback-analyze-list__item.disappointed Разочарован
+
+                section.feedback-messages
+                    h2.feedback-messages__heading.room-heading Отзывы посетителей номера
+                    span.feedback-messages__qty 2 отзыва
+
+                    .customer-message
+                        img(src=require("./user-00000001.jpg") alt="Фото посетителя").customer-message__photo
+                        span.customer-message__likes.customer-message__likes_user-like.
+                            12 #[span.visually-hidden лайков]
+                        p.message
+                            b.message__name Мурад Сарафанов
+                            span.message__time 5 дней назад
+                            span.message__text.
+                                Великолепный матрас на кровати в основной спальне!
+                                А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+                                Выкрикивал комплименты повару — никто не жаловался из соседей.
+                    .customer-message
+                        img(src=require("./user-00000002.jpg") alt="Фото посетителя").customer-message__photo
+                        span.customer-message__likes 2 #[span.visually-hidden лайка]
+                        p.message
+                            b.message__name Патрисия Стёклышкова
+                            span.message__time Неделю назад
+                            span.message__text.
+                                Обслуживание на высоте! Всё аккуратно, чисто. 
+                                Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
+
+                .rules
+                    h2.rules-heading.room-heading Правила
+                    ul.rules-list
+                        li.rules-list__item Нельзя с питомцами
+                        li.rules-list__item Без вечеринок и мероприятий
+                        li.rules-list__item Время прибытия — после 13:00, а выезд до 12:00
+
+                .cancel
+                    h2.cancel__heading.room-heading Отмена
+                    span.cancel__description.
+                        Бесплатная отмена в течение 48 ч. 
+                        После этого при отмене не позднее чем за 5 дн. 
+                        до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+            article.panel.panel_price
+                .panel-heading-room.panel-heading-room-w
+                    span.room-name
+                        |№ 
+                        |#[span.room-name__num 888]
+                        |#[span.room-name__luxe люкс]
+                    span.room-price
+                        |#[span.room-price__value 9 990]
+                        |#[span.room-price__valuta ₽]
+                        |#[span.room-price__desc в сутки]
+
+
+                fieldset.payment
+                    legend.panel__heading.visually-hidden Окончательный расчет стоимости
+                    form.form(method="post" action="https://echo.htmlacademy.ru")
+                        .two-inputs-row-w
+                            .input_and-label-column-w.input-small-w
+                                label.form__label.form__label_expand(for="arrivalDate") Прибытие
+                                input.form__input.form__input_date(type="date" name="arrivalDate" id="arrivalDate" placeholder="ДД.ММ.ГГГГ" required="required")
+                            .input_and-label-column-w.input-small-w
+                                label.form__label.form__label_expand(for="departureDate") Выезд
+                                input.form__input.form__input_date(type="date" name="departureDate" id="departureDate" placeholder="ДД.ММ.ГГГГ" required="required")
+                        .input_and-label-column-w
+                            label.form__label.form__label_expand(for="numOfResidents") Гости
+                            input.form__input(type="email" name="numOfResidents" id="numOfResidents" placeholder="Сколько гостей" required="required")
+                        .payment-w
+                            p.payment-desc.
+                                #[span.price-item 9 990₽ х 4 суток] 
+                                #[span.price-value 39 960₽]
+                            p.payment-desc.payment-desc_info.
+                                #[span.price-item Сбор за услуги: скидка 2 179₽]
+                                #[span.price-value 0₽]
+                            p.payment-desc.payment-desc_info.
+                                #[span.price-item Сбор за дополнительные услуги]
+                                #[span.price-value 300₽]
+                            p.payment-desc.payment-desc_total.
+                                #[span.total-desc Итого ]
+                                #[span.total-price 38 081₽]
+
+
+                        .button-arrow.button-arrow-w
+                            input.button.button_form.button-arrow__button(type="submit" id="roomBtn" value="Забронировать")
+                            label.button-arrow__label(for="roomBtn")
+
+
+
+
+    include ../../components/footer/footer.jade

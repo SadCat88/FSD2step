@@ -1,0 +1,45 @@
+mixin item(data)
+    article.item.item-w
+        .item-images-w
+            figure.item-images
+                //- Link for room card
+                a(href=`room-${data.roomNum}.html`)
+                    //- IMG src
+                    img.item-images__img(src= data.imgPath, alt="Изображение комнаты" width="270" height="151")
+                figcaption.item-images__caption
+                    |№ 
+                    //- room number
+                    |#[span.room-num= `${data.roomNum}`] 
+                    //- room luxe
+                    |#[span.luxe= `${data.roomLuxe}`]
+               
+                a.item-images__arrow.item-images__arrow_left(href="#" aria-hidden="true" tabindex="-1")
+                a.item-images__arrow.item-images__arrow_right(href="#" aria-hidden="true" tabindex="-1")
+
+                p.item-images__links
+                    span.round.round_full
+                    span.round
+                    span.round
+                    span.round
+            
+            p.item-description
+                span.item-description__price
+                    //- room price
+                    |#[span.room-price= `${data.roomPrice}`]
+                    |₽ в сутки
+                span.item-description__rating
+                    //- qty stars
+                    span.visually-hidden Рейтинг: #[span.room-rating= `${data.qtyStars}`] звезд
+                    
+                    span.stars
+                        - var i = 1;
+                        - var n = data.qtyStars;
+                        while i <= 5
+                            if n >= i
+                                span.star.star_full
+                            else
+                                span.star
+                            - i++;
+
+                //- qty feedback
+                span.item-description__feedback #[span.room-feedback-qty= `${data.qtyFeedback}`] Отзывов

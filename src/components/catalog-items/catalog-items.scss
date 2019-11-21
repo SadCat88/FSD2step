@@ -1,7 +1,7 @@
 @import '../../assets/scss/utils/vars';
 
 .catalog-items {
-    padding-top: 11px ;
+    padding-top: 11px;
 
     .catalog-items__heading {
         margin-bottom: 20px;
@@ -23,6 +23,7 @@
     position: relative;
 }
 
+// card
 .item {
     position: relative;
 
@@ -32,6 +33,7 @@
 
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
+    // images-card
     .item-images {
         position: relative;
 
@@ -45,22 +47,6 @@
             width: 270px;
             height: 151px;
             border-radius: 4px 4px 0 0;
-
-            &.item-images__img-1 {
-                z-index: 4;
-            }
-
-            &.item-images__img-1 {
-                z-index: 3;
-            }
-
-            &.item-images__img-1 {
-                z-index: 2;
-            }
-
-            &.item-images__img-1 {
-                z-index: 1;
-            }
         }
 
         .item-images__caption {
@@ -84,9 +70,10 @@
         }
     }
 
+    // bullet links for images-card
     .item-images__links {
         position: absolute;
-        bottom: 16;
+        bottom: 15;
         right: 15;
         z-index: 20;
 
@@ -96,7 +83,7 @@
             height: 8px;
             margin-left: 3px;
 
-            border: 2px solid $mainBgColor;
+            border: 1px solid $mainBgColor;
             border-radius: 50%;
 
             &.round_full {
@@ -105,6 +92,7 @@
         }
     }
 
+    // arrow link for images-card
     .item-images__arrow {
         position: absolute;
         top: 0;
@@ -173,16 +161,15 @@
         }
     }
 
-    .item-images:hover~.item-images__arrow {
-        opacity: 1;
-    }
-
+    // description item
     .item-description {
         position: relative;
         display: block;
 
         height: 86px;
         width: 270px;
+
+        user-select: none;
 
         &::after {
             content: "";
@@ -199,6 +186,7 @@
             background-color: $dark10;
         }
 
+        // item price
         .item-description__price {
             display: block;
             width: 100%;
@@ -219,6 +207,7 @@
 
         }
 
+        // rating item
         .item-description__rating {
             position: absolute;
             bottom: 0;
@@ -260,6 +249,7 @@
             }
         }
 
+        // feedback item
         .item-description__feedback {
             display: block;
             width: 100%;

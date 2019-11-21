@@ -12,7 +12,9 @@ module.exports = function() {
             options: {
               name: "[name].[ext]",
               // маска для сохранения файлов - имя
-              publicPath: `../../img`,
+              // [path] путь к исходному файлу до сборки из исходного файла CSS
+              // [folder] папка в которой физически лежит файл
+              publicPath: `${baseConfig.pathVars.PATHS.assets}/img`,
               // путь для добавления к картинкам в html и css
               outputPath: `${baseConfig.pathVars.PATHS.assets}/img`
               // маска для сохранения файлов - путь

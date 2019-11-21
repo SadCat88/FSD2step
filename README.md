@@ -1,7 +1,12 @@
 # FSD2step
 
-GitHub Pages:<br/>
-https://sadcat88.github.io/FSD2step/prod/
+**GitHub Pages:**<br/>
+Index page: <br>
+https://sadcat88.github.io/FSD2step/prod/<br>
+Catalog page: <br>
+https://sadcat88.github.io/FSD2step/prod/catalog.html<br>
+Item page: <br>
+https://sadcat88.github.io/FSD2step/prod/room-888.html<br>
 
 ## Описание
 
@@ -24,5 +29,8 @@ https://sadcat88.github.io/FSD2step/prod/
 - LandingPage стилизован целиком
 - Панель фильтров на странице /catalog.html готова
 - Завершен предварительный рефакторинг
-  <br>**↓ Last commit**
 - В каталоге готова сетка и карточка товара
+  <br>**↓ Last commit**
+- Каталог товаров заполнен карточками
+- Карточки реализованы через миксин Pug
+- Готов pagination

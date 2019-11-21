@@ -8,67 +8,137 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 70px;
+
 
         .panel_filters {
             width: 266px;
-            
+            margin-right: 15px;
+
             box-shadow: none;
         }
 
         .catalog-items {
             width: 835px;
 
-
-        }
-    }
-
-    .form-dropdown_dates {
-        .form-dropdown-btn__label {
-            &::before {
-                content: "19 авг - 23 авг";
-            }
-        }
-
-        .form-dropdown-btn__input {
-            &:checked~.form-dropdown-list {
-                z-index: 4;
+            .catalog-items-w {
+                margin-bottom: 25px;
             }
         }
     }
 
-    .form-dropdown_guests {
-        .form-dropdown-btn__label {
-            &::before {
-                content: "3 гостя, 1 младенец";
+    .panel_filters {
+        .form-dropdown_dates {
+            .form-dropdown-btn__label {
+                &::before {
+                    content: "19 авг - 23 авг";
+                }
+            }
+
+            .form-dropdown-btn__input {
+                &:checked~.form-dropdown-list {
+                    z-index: 4;
+                }
             }
         }
 
-        .form-dropdown-btn__input {
-            &:checked~.form-dropdown-list {
-                z-index: 3;
+        .form-dropdown_guests {
+            .form-dropdown-btn__label {
+                &::before {
+                    content: "3 гостя, 1 младенец";
+                }
+            }
+
+            .form-dropdown-btn__input {
+                &:checked~.form-dropdown-list {
+                    z-index: 3;
+                }
+            }
+        }
+
+        .form-dropdown_amenity {
+            .form-dropdown-btn__label {
+                &::before {
+                    content: "2 спальни, 2 кровати...";
+                }
+            }
+
+            .form-dropdown-btn__input {
+                &:checked~.form-dropdown-list {
+                    z-index: 2;
+                }
+            }
+        }
+
+        .form-dropdown_add-amenity {
+            .form-dropdown-btn__input {
+                &:checked~.form-dropdown-list {
+                    z-index: 1;
+                }
             }
         }
     }
 
-    .form-dropdown_amenity {
-        .form-dropdown-btn__label {
-            &::before {
-                content: "2 спальни, 2 кровати...";
-            }
-        }
+    .pagination-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -15px;
 
-        .form-dropdown-btn__input {
-            &:checked~.form-dropdown-list {
-                z-index: 2;
-            }
-        }
-    }
+        user-select: none;
 
-    .form-dropdown_add-amenity {
-        .form-dropdown-btn__input {
-            &:checked~.form-dropdown-list {
-                z-index: 1;
+        .pagination {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+
+            .pagination__item {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+
+                @extend .inter-font;
+                color: $dark50;
+                text-align: center;
+                line-height: 40px;
             }
+
+            .pagination__item-link {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                color: $dark50;
+
+                &.pagination__item-link_first {
+                    font-weight: bold;
+                    color: $mainBgColor;
+
+                    border-radius: 50%;
+                    background: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+                }
+
+                &.pagination__item-link_last {
+                    font-weight: bold;
+                    color: $mainBgColor;
+
+                    border-radius: 50%;
+                    background: linear-gradient(180deg, $secondColor 0%, $secondGradientColor 100%);
+
+                    &::after {
+                        content: "arrow_forward";
+
+                        width: 40px;
+                        height: 40px;
+
+                        @extend .icons-font;
+                        font-size: 24px;
+                        text-align: center;
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            .pagination-nav__description {}
         }
     }
 }

@@ -42,7 +42,7 @@ module.exports = function() {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: `${baseConfig.pathVars.PATHS.assets}/pages/[name]/[name].[hash].css`
+        filename: `[name].[hash].css`
         // путь для сохранения файла
       })
     ]

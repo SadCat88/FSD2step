@@ -6,8 +6,12 @@ block body
     main.promo.promo_bg-image
         .wrapper
             h1.visually-hidden Сервис бронирования номеров в отелях
-            p.promo-heading Лучшие номера для вашей работы, отдыха и просто вдохновения
-
+            p.promo-heading #[a(href="./catalog.html").link_kek ВРЕМЕННАЯ ССЫЛКА НА КАТАЛОГ <br>] Лучшие номера для вашей работы, отдыха и просто вдохновения
+            style.
+                .link_kek {
+                    color: red;
+                    font-size: 24px;
+                }
             article.panel.promo-panel-w
                 fieldset
                     legend.panel__heading Найдём номера под ваши пожелания
@@ -25,10 +29,8 @@ block body
                         .button-arrow.button-arrow-w
                             input.button.button_form.button-arrow__button(type="submit" id="roomBtn" value="Подобрать номер")
                             label.button-arrow__label(for="roomBtn")
-    
+
     include ../../components/footer/footer.jade
-
-
 
     article(id="signIn").panel.panel_modal.panel_login
         fieldset

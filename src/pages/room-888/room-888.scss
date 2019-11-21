@@ -1,0 +1,366 @@
+@import '../../assets/scss/utils/vars.scss';
+
+.room {
+    background-color: $mainBgColor;
+    margin-bottom: 60px;
+
+    .room-images {
+        margin-bottom: 73px;
+
+        .room-images__img_big {
+            float: left;
+            width: 68.125%;
+            height: 484px;
+            object-fit: cover;
+        }
+
+        .room-images__img_small {
+            float: right;
+            clear: right;
+            width: 31.875%;
+            height: 242px;
+            object-fit: cover;
+        }
+    }
+
+    .room-heading {
+        margin-bottom: 20px;
+
+        @extend .main-page-heading;
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    .room-w {
+        max-width: 712px;
+    }
+
+    .description-w {
+        margin-right: 105px;
+        margin-bottom: -10px;
+    }
+}
+
+.description {
+    float: left;
+
+    // description item
+    .description-list__item {
+        position: relative;
+
+        display: flex;
+
+        padding-left: 58px;
+        margin-bottom: 41px;
+
+        @extend .main-font;
+
+        .icon {
+            // item icons
+
+            &::before {
+                content: "";
+
+                margin-left: -58px;
+
+                @extend .icons-font;
+                font-size: 48px;
+                line-height: 48px;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                background-image: linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+                background-image: -ms-linear-gradient(180deg, $mainColor 0%, $mainGradientColor 100%);
+                background-image: -webkit-gradient(linear, left top, left bottom, from($mainColor), to($mainGradientColor));
+                background-image: -o-linear-gradient(top, $mainColor 0%, $mainGradientColor 100%);
+
+                @media all and (-ms-high-contrast: none),
+                (-ms-high-contrast: active) {
+                    /* IE10+ CSS styles go here */
+
+                    color: $mainColor;
+                    background: transparent;
+                }
+            }
+
+            &.icon_comfort::before {
+                content: "insert_emoticon";
+            }
+
+            &.icon_convenience::before {
+                content: "location_city";
+            }
+
+            &.icon_cosiness::before {
+                content: "whatshot";
+            }
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+
+            .item__heading {
+                font-weight: bold;
+            }
+        }
+
+        // bottom line
+        &:not(:last-of-type)::after {
+            content: "";
+
+            position: absolute;
+            bottom: -20;
+            left: 0;
+
+            width: 280px;
+            height: 1px;
+
+            background-color: $dark10;
+        }
+    }
+}
+
+.feedback-analyze {
+    float: left;
+
+    // analyze diagram
+    .diagram {
+        position: relative;
+
+        width: 120px;
+        height: 120px;
+        float: left;
+        margin-right: 30px;
+
+        .diagram-graphic {
+            position: absolute;
+
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+
+            border: 4px solid #FFE39C;
+        }
+
+        .diagram-label {
+            position: absolute;
+            z-index: 2;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+
+            @extend .main-bold-font;
+            color: $mainColor;
+            text-align: center;
+
+            .qty {
+                @extend .main-page-heading;
+                color: $mainColor;
+            }
+        }
+    }
+
+    // legend list
+    .feedback-analyze-list {
+        float: right;
+        margin-top: 27px;
+
+        .feedback-analyze-list__item {
+            &::before {
+                content: "";
+
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin-right: 5px;
+
+                border-radius: 50%;
+            }
+
+            &.excellent::before {
+                background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+            }
+
+            &.good::before {
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                ;
+            }
+
+            &.satisfactorily::before {
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            }
+
+            &.disappointed::before {
+                background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+            }
+        }
+    }
+}
+
+.feedback-messages {
+    clear: both;
+    margin-bottom: 32px;
+
+    .feedback-messages__heading {
+        float: left;
+        margin-bottom: 24px;
+    }
+
+    .feedback-messages__qty {
+        float: right;
+
+        line-height: 32px;
+    }
+
+    .customer-message {
+        position: relative;
+
+        clear: both;
+        padding-left: 56px;
+        margin-bottom: 25px;
+
+        @extend .inter-font;
+
+
+        .customer-message__photo {
+            position: absolute;
+            left: -2;
+            top: -4;
+
+            width: 48px;
+            height: 48px;
+
+            @extend .inter-bold-font;
+
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        .customer-message__likes {
+            position: absolute;
+            left: 3;
+            top: 56;
+
+            display: block;
+            padding-left: 4px;
+            width: 40px;
+            height: 20px;
+            border: 1px solid $dark25;
+            border-radius: 10px;
+
+            font-size: 10px;
+            line-height: 20px;
+            color: $dark25;
+            user-select: none;
+
+            &::before {
+                content: "favorite_border";
+
+                margin-right: 5px;
+
+                @extend .icons-font;
+                font-size: 10px;
+                line-height: 9px;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                border: 1px solid $mainColor;
+                color: $mainColor;
+
+                &::before {
+                    content: "favorite";
+                }
+            }
+
+            // user like
+            &.customer-message__likes_user-like {
+                border: 1px solid $mainColor;
+                color: $mainColor;
+
+                &::before {
+                    content: "favorite";
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    border: 1px solid $dark25;
+                    color: $dark25;
+
+                    &::before {
+                        content: "favorite_border";
+                    }
+                }
+            }
+        }
+
+        .message {
+
+            .message__name {
+                display: block;
+                margin-bottom: 7px;
+            }
+
+            .message__time {
+                display: block;
+                margin-bottom: 13px;
+            }
+
+            .message__text {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.rules {
+    float: left;
+    padding-left: 20px;
+    margin-right: 10px;
+
+    .rules-list {
+        .rules-list__item {
+            position: relative;
+
+            margin-bottom: 10px;
+            width: 265px;
+
+            &::before {
+                content: "";
+
+                position: absolute;
+                left: -20;
+                top: 4px;
+
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                // margin-right: 10px;
+
+                background-color: $dark25;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.cancel {
+    float: right;
+    max-width: 341px;
+    margin-right: 10px;
+}
+
+.panel_price {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 380px;
+}
